@@ -1,0 +1,152 @@
+ <div id="white-paper"></div>
+        
+    
+			
+<!-- START BLOCK : register -->		
+    <!--帐号与密码设置-->
+    <div id="modal-signin" class="iziModal">
+        <div class="head-icon">
+            <div class="step-one"><div></div><p>帐号与密码设置</p></div>
+            <div class="step-two"><div></div><p>手机验证</p></div>
+            <div class="step-three"><div></div><p>注册完成</p></div>
+        </div>
+         <div class="distributor">代理商-{agentid}</div> 
+       <form class="signin-form" id="signinForm" action="../../ac_register.php" method="post" target="nm_iframe" onsubmit="return false">
+            <div class="form-group">
+                <label for="account">帐号</label>
+                <select name="name" id="name" onChange="selectusername(this.value);" required oninvalid="setCustomValidity('请选择帐号');" oninput="setCustomValidity('');" >
+                    <option value="" disabled selected hidden>选择帐号</option>
+                    <!-- START BLOCK : agentlistBlock -->
+                        <option value="{username}" {s}>{username}</option>
+                     <!-- END BLOCK : agentlistBlock -->   
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="password">密码</label>
+                 <input type="password" id="loginPwd" aria-describedby="passwordHelp" placeholder="帐号密码请英数混合，至少６个字元!" required oninvalid="setCustomValidity('请输入密码');" oninput="setCustomValidity('');" >
+            </div>
+            <div class="form-group">
+                <label for="password">确认密码</label>
+                <input type="password" id="loginPwd2" aria-describedby="epasswordHelp" placeholder="帐号密码请英数混合，至少６个字元!" required oninvalid="setCustomValidity('请再次输入密码');" oninput="setCustomValidity('');" >
+            </div>
+            <button type="button" class="regi_next" onclick="regi_step1()">下一步</button>
+        </form>
+        <iframe id="id_iframe" name="nm_iframe" style="display:none;"></iframe>  
+    </div>
+    
+    <!--手机验证-->		
+    <div id="phone-verification" class="iziModal">
+        <div class="head-icon">
+            <div class="step-one"><div></div><p>帐号与密码设置</p></div>
+            <div class="step-two"><div></div><p>手机验证</p></div>
+            <div class="step-three"><div></div><p>注册完成</p></div>
+        </div>
+         <div class="distributor">代理商-{agentid}</div> 
+        <form class="signin-form" id="phoneForm" action="../../ac_register.php" method="post" target="iframe_none" >
+            <div class="form-group">
+                <label for="name">真实姓名</label>
+               <input type="text" id="realname" aria-describedby="name" placeholder="请填写真实姓名" required
+               required oninvalid="setCustomValidity('汇款户名请输入中文或英文字');" oninput="setCustomValidity('');">
+            </div>
+            <div class="form-group">
+                <label for="password">交易密码</label>
+                <input type="password" id="receivePwd" aria-describedby="passwordHelp" placeholder="帐号密码请英数混合，至少６个字元!" required oninvalid="setCustomValidity('请输入交易密码');" oninput="setCustomValidity('');" >
+            </div>
+            <div class="form-group">
+                <label for="repassword">确认密码</label>
+                <input type="password" id="receivePwd2" aria-describedby="passwordHelp" placeholder="帐号密码请英数混合，至少６个字元" required title='与密码不符' oninvalid="setCustomValidity('请再次输入交易密码');" oninput="setCustomValidity('');">
+            </div>
+            <div class="form-group">
+                <label for="password">手机号码</label>
+                <div class="form-row">
+                   <select  id="area" name="area" class="flexS" required >
+                        <option value="86" selected>中国</option>
+                        <option value="886">台湾</option>
+                        <option value="852">香港</option>
+                        <option value="853">澳门</option>
+                        <option value="81">日本</option>
+                        <option value="60">马来西亚</option>
+                        <option value="84">越南</option>
+                        <option value="62">印尼</option>
+                        <option value="66">泰国</option>
+                        <option value="61">澳洲</option>
+                        <option value="65">新加坡</option>
+                        <option value="63">菲律宾</option>
+                        <option value="971">阿拉伯联合大公国</option>
+                        <option value="855">柬埔寨</option>
+                    </select>
+                    <input type="text" class="flexL" id="mobile" aria-describedby="number" placeholder="请输入手机号码" required oninvalid="setCustomValidity('请输入手机号码');" oninput="setCustomValidity('');">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="verification-code">手机验证码</label>
+                <div class="form-row">
+                    <input type="text" id="mobile_ans" name="mobile_ans" class="flexL" aria-describedby="verification-code" placeholder="请输入验证码" required >
+                   <button type="button" class="verification-code"  href="javascript:;" onclick="mobilecheck()">传送验证码</button>
+                </div>
+            </div>
+            <p id="point_notice"></p>
+             <button type="button" class="regi_next" onclick="register2()">完成</button><!--"-->
+        </form>
+        <iframe id="iframe_none" name="iframe_none" style="display:none;"></iframe>  
+    </div>
+				
+	<!--提醒-->			
+    <div id="warn" class="iziModal">
+        <p class="warn">手机验证码,最多只能发送出3次,<br/>仍无法收到简讯,请联系客服人员!</p>
+        <a type="link" class="check"  href="javascript:window.location.reload()">确定</a>
+    </div>
+				
+    <!--注册完成-->	
+    <div id="finish" class="iziModal">
+        <div class="head-icon">
+            <div class="step-one"><div></div><p>帐号与密码设置</p></div>
+            <div class="step-two"><div></div><p>手机验证</p></div>
+            <div class="step-three"><div></div><p>注册完成</p></div>
+        </div>
+        <div class="distributor">注册完成</div>
+        <img src="interface/v2/img/ok.png" class="ok"/>
+        <h1>恭喜您!注册成功!</h1>
+        <h2>您还可以<strong>绑定银行卡</strong>，以方便您随时取款!</h2>
+        <div class="finish-btn">
+            <input type="button" value="前往市场列表" class="proceed" onclick="location.href='targetList.php'">
+            <input type="button" value="立即存款" class="deposit" onclick="location.href='pointDeposit.php'">
+        </div>
+    </div>
+   
+	<script type="text/javascript">
+        $("#modal-signin").iziModal({
+			title: " ",
+			subtitle: "",
+			iconClass: '',
+			width: 700,
+			padding: 0
+		});
+        $("#phone-verification").iziModal({
+			title: " ",
+			subtitle: "",
+			iconClass: '',
+			width: 700,
+			padding: 0
+		});
+        $("#warn").iziModal({
+			title: "提醒",
+			subtitle: "",
+			iconClass: '',
+			width: 400,
+			padding: 0
+		});
+        $("#finish").iziModal({
+			title: " ",
+			subtitle: "",
+			iconClass: '',
+			width: 700,
+			padding: 0
+		});
+		
+
+	</script>
+<!-- END BLOCK : register -->
+
+
+

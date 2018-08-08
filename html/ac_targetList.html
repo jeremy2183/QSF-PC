@@ -1,0 +1,52 @@
+	
+	<!-- START BLOCK : GameMarket -->
+	<!-- 市场項目 Right Table START-->
+	<div class="head">
+		<div class="market_list_icon"></div>
+		<div class="page_title">市场列表</div>
+		<div class="market_list_btn"><button class="game_record" id="game_record" onclick="pk()">对战</button><div class="update" onclick="reLoadMarket()">更新<span id="runMarketTime">35</span></div></div>
+	</div>
+	<div class="page_title_black_line"></div>
+	<div class="market_game_title" id="GameTitleInfo"></div>
+
+	<div class="market_whole_table">
+		<!-- START BLOCK : MarketTableRow -->
+		<div class="market_whole_row">
+		
+			<!-- START BLOCK : MarketTable -->
+			<div class="market_whole_cell {pos}"><!-- class分table_left, table_right -->
+				<table class="market_table_head">
+					<tr>
+						<td class="{cell}"><div class="{icon}"></div></td><!-- td class分cell_39, cell_46, cell_47, cell_48 / div class分四大項head_icon1-1, head_icon1-2, head_icon1-3, head_icon1-4 -->
+						<td class="head_title cell_40">{marketname}</td><td class="cell_41 head_amount">成交量：{totaldealmoney}</td><td class="cell_42"><div class="head_icon2"></div></td>
+					</tr>
+				</table>
+				<table class="market_table_content">
+					<tr class="content_title"><td class="cell_43">《选项》</td><td class="cell_44">《获利％》</td><td class="cell_45">《可交易量》</td></tr>
+					<!-- START BLOCK : MarketSelectList -->
+						<tr><td class="cell_43">{selectItem}</td><td class="cell_44">{profit}</td><td class="cell_45">{tradingVolView}
+						<!-- START BLOCK : MarketSelectListButton -->
+						<div class="btn_order"><button onclick="MarketOrder( '{marketid}', '{selectid}', '{tradingVol}', '{marketname}', '{selectname}', '{profit}', '{systemrate}', '{price}', '{fee}' )">下单</button></div>
+						<!-- END BLOCK : MarketSelectListButton -->
+						</td></tr>
+					<!-- END BLOCK : MarketSelectList -->
+					<!-- START BLOCK : MarketSelectListLast -->
+						<tr class="content_last"><td class="cell_43">{selectItem}</td><td class="cell_44">{profit}</td><td class="cell_45">{tradingVolView}
+						<!-- START BLOCK : MarketSelectListButtonLast -->
+						<div class="btn_order"><button onclick="MarketOrder( '{marketid}', '{selectid}', '{tradingVol}', '{marketname}', '{selectname}', '{profit}', '{systemrate}', '{price}', '{fee}' )">下单</button></div>
+						<!-- END BLOCK : MarketSelectListButtonLast -->
+						</td></tr>
+					<!-- END BLOCK : MarketSelectListLast -->
+				</table>
+			</div>
+			<!-- END BLOCK : MarketTable -->
+
+		</div>
+		<!-- END BLOCK : MarketTableRow -->
+	</div>
+	<!-- 市场項目 Right Table END -->
+	<!-- END BLOCK : GameMarket -->
+	
+	<!-- START BLOCK : GameMarketMsg -->
+	<script>msg( {'status':0, 'title':'', 'text1':'{msg}', 'text2':'', 'nextUrl':'targetList.php' } );</script>
+	<!-- END BLOCK : GameMarketMsg -->

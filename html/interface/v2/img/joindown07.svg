@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 543.3 71.4" enable-background="new 0 0 543.3 71.4" xml:space="preserve">
+<g>
+	<g>
+		<path fill="#F2F2F2" d="M21.8,67.5C12,67.5,4,59.4,4,49.6V21.8C4,12,12,4,21.8,4h499.6c9.8,0,17.9,8,17.9,17.9v27.8
+			c0,9.8-8,17.9-17.9,17.9H21.8z"/>
+	</g>
+	<g>
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="271.6265" y1="2.7444" x2="271.6265" y2="71.7296">
+			<stop  offset="0" style="stop-color:#EBEBEB"/>
+			<stop  offset="0.1679" style="stop-color:#E5E5E5"/>
+			<stop  offset="0.4015" style="stop-color:#D3D3D3"/>
+			<stop  offset="0.6734" style="stop-color:#B5B5B5"/>
+			<stop  offset="0.9725" style="stop-color:#8C8C8C"/>
+			<stop  offset="1" style="stop-color:#888888"/>
+		</linearGradient>
+		<path fill="url(#SVGID_1_)" d="M521.4,0H21.8C9.8,0,0,9.8,0,21.8v27.8c0,12,9.8,21.8,21.8,21.8h499.6c12,0,21.8-9.8,21.8-21.8
+			V21.8C543.3,9.8,533.5,0,521.4,0z M539.3,49.6c0,9.8-8,17.9-17.9,17.9H21.8C12,67.5,4,59.4,4,49.6V21.8C4,12,12,4,21.8,4h499.6
+			c9.8,0,17.9,8,17.9,17.9V49.6z"/>
+	</g>
+	<g opacity="0.4">
+		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="271.6263" y1="49.8687" x2="271.6263" y2="3.9673">
+			<stop  offset="0" style="stop-color:#D4D4D4"/>
+			<stop  offset="0.2604" style="stop-color:#D1D1D1"/>
+			<stop  offset="0.4173" style="stop-color:#C9C9C9"/>
+			<stop  offset="0.5469" style="stop-color:#BBBBBB"/>
+			<stop  offset="0.6615" style="stop-color:#A6A6A6"/>
+			<stop  offset="0.7663" style="stop-color:#8C8C8C"/>
+			<stop  offset="0.864" style="stop-color:#6C6C6C"/>
+			<stop  offset="0.9543" style="stop-color:#464646"/>
+			<stop  offset="1" style="stop-color:#303030"/>
+		</linearGradient>
+		<path fill="url(#SVGID_2_)" d="M539.3,29.2v-8.9c0-9-7.3-16.3-16.3-16.3H20.2C11.2,4,4,11.3,4,20.2v28.5c0,0.4,0,0.8,0.1,1.2
+			C44.3,31.9,493.9,20.5,539.3,29.2z"/>
+	</g>
+</g>
+</svg>

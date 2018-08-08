@@ -1,0 +1,96 @@
+<div class="main_content market_sidebar news_page_main_content">
+	<div class="head">
+		<div class="market_list_icon"></div>
+		<div class="page_title">今日头条</div>
+	</div>
+	<div class="page_title_black_line"></div>
+	<!--START BLOCK : SEENEWS -->
+		<!--START BLOCK : newscontent -->
+		<div class="news_content">
+			<h1 class="news_content_title">{title}</h1>
+			<div class="news_content_info">
+				<span class="info_date">{news_time}</span>
+				<span id="newslike" class="info_like" onclick="newslike({likes},{id})">{likes}</span>
+				<span class="info_view">{views}</span>
+			</div>
+			{news_content}
+		</div>
+		<!--END BLOCK : newscontent -->
+		<div class="comment_content">
+			<h5 class="comment_num">{msg_num}</h5>
+			<span class="comment_icon"></span>
+			<!--START BLOCK : CANTCOMMENT-->
+			<div>登入后方可发表留言</div>
+			<!--END BLOCK : CANTCOMMENT-->
+			<!--START BLOCK : COMMENTAREA-->
+			<div class="comment_input">
+				<textarea id="msg" type="text" rows="5"></textarea>
+				<input type="hidden" id="news_id" value="{id}">
+				<button class="comment_btn" onclick="opinion()">发送</button>
+			
+			</div>
+			<!--END BLOCK : COMMENTAREA -->
+			<h5 class="comment_hot">热门评论</h5>
+			<!--START BLOCK : MSG -->
+			<div id="hide" class="comment {x}" style="display:{status}">
+				<span class="comment_icon"></span>
+				<span class="comment_info">
+				<span class="comment_account">{poster}</span>
+				<span class="comment_time">{time}</span>
+				<span  id="msg_like{msg_id}" class="info_like" onclick="msglike({like},{msg_id})">{like}</span>
+				</span>
+				<p class="comment_text">{content}</p>
+			</div>
+			<!--END BLOCK : MSG-->
+			<!--START BLOCK : MORE-->
+			<button class="more_comment" onclick="showhide()">显示所有评论</button>
+			<!--END BLOCK : MORE-->
+		</div>
+	<!--END BLOCK : SEENEWS-->
+
+	<!--START BLOCK : NEWSLIST-->
+	<ul class="page_1-4">
+		<!--1-4-->
+		<!--START BLOCK : HOTNEWSBAR-->
+		<li>
+			<a href="hotnews.php?news_id={id}">
+				<div class="news_list_content">
+					<img src="{title_img}" width="280" height="160">
+					<h4 class="hotnews_title">{title}</h4>
+					<div class="newsPage_lcGroup">
+						<span class="info_like">{likes}</span>
+						<span class="info_comment">{msg_num}</span>
+					</div>
+					<div class="newsPage_dvGroup">
+						<span class="info_date">{news_time}</span>
+						<span class="info_view">{views}</span>
+					</div>
+				</div>
+			</a>
+		</li>	
+		<!--END BLOCK : HOTNEWSBAR -->
+	</ul>
+
+	<!--5-10-->
+	<ul class="page_5-10">
+	<!--START BLOCK : HOTNEWSLINE -->
+		<li>
+			<a href="hotnews.php?news_id={id}">
+				<div class="news_list_content">
+					<img src="{title_img}" width="200" height="120">
+					<div class="title_N_outline">
+						<h4 class="hotnews_title">{title}</h4>
+						<p class="content_outline">{sub_news_content}</p>
+						<div class="news_list_info">
+							<span class="info_view">{views}</span>
+							<span class="info_date">{news_time}</span>
+						</div>
+					</div>
+				</div>
+			</a>
+		</li>
+		<!--END BLOCK : HOTNEWSLINE-->
+	</ul>
+	<!--END BLOCK : NEWSLIST-->
+</div>
+
