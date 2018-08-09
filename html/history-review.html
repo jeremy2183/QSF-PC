@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+	<meta name="viewport" content="width=1280">
+	<title>history</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/jquery-ui.css">
+	<link rel="stylesheet" href="../css/mainStyle.css">
+	<link rel="stylesheet" href="../css/races_news.css">
+	<script>
+		var now = new Date();
+		var year = now.getFullYear();
+		var month = now.getMonth();
+		var d = now.getDate();
+		var h = now.getHours();
+		var m = now.getMinutes();
+		var s = now.getSeconds();
+
+		var TodayStr = year + "-" + month +"-"+ d +" "+ h +":" + m +":"+ s ;
+	</script>
+</head>
+<body>
+	<div class="top_nav nav navbar-fixed-top">
+		<div class="date" id="sysDateTime">
+		</div>
+		<div class="black_dash"></div>
+		<div class="marquee_icon"></div>
+		<div class="marquee_content">
+			<marquee>『賽事公告』：02-28/02:30 [附加賽]梅赫轮后客队vs华斯蓝德比华伦后客队，因国外资料有所出入，故这场比赛的注单全部取消，不便之处尽请原谅。</marquee>
+		</div>
+		<div class="nav_info">
+			<div class="box_border">
+				<div class="user_icon"></div>
+				<div class="user_name">tg888</div>
+			</div>
+			<div class="box_border2">
+				<div class="acc_icon"></div>
+				<div class="acc_money">300,016,400.00</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="whole_table">
+		<div class="whole">
+			<div class="side_nav">
+				<div class="logo_wrap">
+					<a href="temp-review.html">
+            <div class="tg_logo"></div>
+          </a>
+				</div>
+				<div class="side_nav_content">
+					<ul>
+						<li id="market_list">
+							<a href="ac_hotNews_page_review.html"> 
+								<div class="side_nav_icon0"></div>
+								今日头条
+							</a>
+						</li>
+						<li id="market_list">
+							<a href="targetList-review.html">
+								<div class="side_nav_icon1"></div>
+								市场列表
+							</a>
+						</li>
+						<li id="trade_detail">
+							<div class="side_nav_icon2"></div>
+							交易明細
+						</li>
+						<li id="history">
+							<div class="side_nav_icon3"></div>
+							历史帐务
+						</li>
+						<li id="game_result">
+							<div class="side_nav_icon4"></div>
+							赛事结果
+						</li>
+						<li id="live_score">
+							<div class="side_nav_icon6"></div>
+							即时比分
+						</li>
+						<li id="announce">
+							<div class="side_nav_icon5"></div>
+							官方公告
+						</li>
+					</ul>
+				</div>
+				<div class="black_line"></div>
+				<ul>
+					<li class="member_text" id="my">
+						<div class="member_icon"></div>
+						会员中心
+					</li>
+				</ul>
+
+				<button class="nav_wd_btn">充值/提领</button>
+				<button class="log_out">登出</button>
+				<div class="black_line"></div>
+
+				<div class="online_24">【 24H線上客服 】</div>
+				<div>
+					<div class="group">
+						<div class="service_online"></div>
+						<div>线上客服</div>
+					</div>
+					<div class="group">
+						<div class="service_QQ" id="service_QQ"></div>
+						<div>QQ客服</div>
+					</div>
+
+					<div class="group">
+						<div class="service_weixin" id="service_weixin"></div>
+						<div>微信客服</div>
+					</div>
+
+					<div class="group" id="service_more_btn">
+						<div class="service_more"></div>
+						<div>更多帮助</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="main_content">
+		    <div class="content">
+		    	<!-- <form id="detail_form" action="history.php" method="GET">
+            <div class="head">
+            <div class="history_icon"></div>
+            <div class="page_title">历史帐务</div>
+            <div class="datepicker_group">
+                <div class="datepicker_text">日期查询 :</div>
+                <div><input class="datepicker" id="from" name="starttime" type="text" value="{date}"></div>
+                <input type="hidden" name="detail" value="1">
+                <div class="datepicker_icon"></div>
+                <div class="datepicker_text">至</div>
+                <div><input  class="datepicker" id="to" name="endtime" type="text" value="{date}"></div>
+                <div class="datepicker_icon"></div>
+                <button  class="datepicker_submit" onclick="return fromto();">发送</button>
+            </div>
+            </div>
+        	</form> -->
+
+        	  <div class="head ">
+                <div class="history_icon"></div>
+                <div class="page_title">历史帐务</div>
+               <!--  <form id="detail_form" name="detail_form" class="form-inline form-block" action="history.php" method="GET">
+	                <div class="form-group">
+	                    <input id="starttime" name="starttime" type="text" class="form-control" value="{startdate}" />
+	                    <label for="starttime"><div class="datepicker_icon"></div></label>
+	                    &nbsp;
+	                    <input id="endtime" name="endtime" type="text" class="form-control" value="{enddate}" />
+	                    <label for="endtime"><div class="datepicker_icon"></div></label>
+
+	                </div>
+								<input type="hidden" name="detail"  id="detail" value="1">
+					
+                </form><button class="datepicker_submit" onclick="return fromto();">发送</button> -->
+            </div>
+		
+            <div class="page_title_black_line"></div>
+            <div class="history_btn_group">
+                <button class="history_btn1" id="week" onclick="week(0)">本周帐务<br><span>近７日內帐务显示</span></button>
+                <button class="history_btn2" id="week" onclick="week(1)">上周帐务<br><span>７日前帐务显示</span></button>
+                <button class="history_btn3" id="week" onclick="week(2)">前兩周帐务<br><span>１４日前帐务显示</span></button>
+                <button class="history_btn4" id="week" onclick="week(3)">近一年帐务<br><span>１年內帐务显示</span></button>
+                <input type="hidden" name="mark" id="mark" value="{mark}">
+            </div>
+
+            <!-- START BLOCK : userhistoryamountTitleBlock -->   
+         
+            <div class="history_wrap" id="history_table{no}" style="{status}">
+                <table class="history_head">
+                    <tr id="detail_link">
+                        <td>交易日期</td>
+                        <td>交易金额</td>
+                        <td>实货量</td>
+                        <td>总结算</td>
+                    </tr>
+                </table>
+            
+                <table id="historyamount" class="history_content">
+               <!-- START BLOCK : userhistoryamountBlock -->
+                    <tr>
+                        <td><a href="history.php?detail=1&starttime={startdate}&endtime={enddate}">{acc_time}</a></td>
+                        <td>&yen;{dealmoney}</td>
+                        <td>{result_quantity}</td>
+                        <td><font color="{color}">{after}</font></td>
+                    </tr>
+                     <!-- END BLOCK : userhistoryamountBlock -->  
+                    <tr>
+                        <td>合计</td>
+                        <td>&yen;{totaldealmoney}</td>
+                        <td>{totalresult}</td>
+                        <td><font color="{color}">{totalafter}</font></td>
+                    </tr>
+                 
+                </table>
+            </div>  
+             <!-- END BLOCK : userhistoryamountTitleBlock --> 
+               
+                
+            
+               <!--  <table class="history_total">
+                    <tr>
+                        <td>合计</td>
+                        <td>&yen;{totaldealmoney}</td>
+                        <td>{totalresult}</td>
+                        <td class="color_green">{totalafter}</td>
+                  </div>  </tr>
+                </table> -->
+		    
+		    </div>
+			</div>
+		</div>
+	</div>
+
+  <div class="footer">
+		<div class="footer_container">
+			<div class="footer_black_line"></div>
+			<div>
+				<div class="sup_logo"></div>
+				<div class="footer_text">&copy; burgundy corporate tower,sen gil puyat ave makati city +63 977 103 6903
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/mainJs.js"></script>
+	<script src="../js/v2.js"></script>
+	<script src="../js/tgjs.js"></script>
+	<script src="../js/sysDateTime.js"></script>
+	<script>
+		runTime();
+		 //   $(".comment_input textarea").scroll(function(){  
+			// 	var height = $(this).height()+30;
+			// 	$(this).height(height);
+			// });
+
+	</script>
+
+</body>
+</html>
