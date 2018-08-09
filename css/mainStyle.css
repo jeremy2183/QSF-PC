@@ -12,6 +12,14 @@ button {
 	outline-style: none;
 }
 
+button a{
+	color: #fff;
+}
+
+button a:hover{
+	color: #fff;
+}
+
 .row {
 	margin: 0px;
 }
