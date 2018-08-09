@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+	<meta name="viewport" content="width=1280">
+	<title>history</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/jquery-ui.css">
+	<link rel="stylesheet" href="../css/mainStyle.css">
+	<link rel="stylesheet" href="../css/races_news.css">
+	<script>
+		var now = new Date();
+		var year = now.getFullYear();
+		var month = now.getMonth();
+		var d = now.getDate();
+		var h = now.getHours();
+		var m = now.getMinutes();
+		var s = now.getSeconds();
+
+		var TodayStr = year + "-" + month +"-"+ d +" "+ h +":" + m +":"+ s ;
+	</script>
+</head>
+<body>
+	<div class="top_nav nav navbar-fixed-top">
+		<div class="date" id="sysDateTime">
+		</div>
+		<div class="black_dash"></div>
+		<div class="marquee_icon"></div>
+		<div class="marquee_content">
+			<marquee>『賽事公告』：02-28/02:30 [附加賽]梅赫轮后客队vs华斯蓝德比华伦后客队，因国外资料有所出入，故这场比赛的注单全部取消，不便之处尽请原谅。</marquee>
+		</div>
+		<div class="nav_info">
+			<div class="box_border">
+				<div class="user_icon"></div>
+				<div class="user_name">tg888</div>
+			</div>
+			<div class="box_border2">
+				<div class="acc_icon"></div>
+				<div class="acc_money">300,016,400.00</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="whole_table">
+		<div class="whole">
+			<div class="side_nav">
+				<div class="logo_wrap">
+					<a href="temp-review.html">
+            <div class="tg_logo"></div>
+          </a>
+				</div>
+				<div class="side_nav_content">
+					<ul>
+						<li id="market_list">
+							<a href="ac_hotNews_page_review.html"> 
+								<div class="side_nav_icon0"></div>
+								今日头条
+							</a>
+						</li>
+						<li id="market_list">
+							<a href="targetList-review.html">
+								<div class="side_nav_icon1"></div>
+								市场列表
+							</a>
+						</li>
+						<li id="trade_detail">
+							<div class="side_nav_icon2"></div>
+							交易明細
+						</li>
+						<li id="history">
+							<div class="side_nav_icon3"></div>
+							历史帐务
+						</li>
+						<li id="game_result">
+							<div class="side_nav_icon4"></div>
+							赛事结果
+						</li>
+						<li id="live_score">
+							<div class="side_nav_icon6"></div>
+							即时比分
+						</li>
+						<li id="announce">
+							<div class="side_nav_icon5"></div>
+							官方公告
+						</li>
+					</ul>
+				</div>
+				<div class="black_line"></div>
+				<ul>
+					<li class="member_text" id="my">
+						<div class="member_icon"></div>
+						会员中心
+					</li>
+				</ul>
+
+				<button class="nav_wd_btn">充值/提领</button>
+				<button class="log_out">登出</button>
+				<div class="black_line"></div>
+
+				<div class="online_24">【 24H線上客服 】</div>
+				<div>
+					<div class="group">
+						<div class="service_online"></div>
+						<div>线上客服</div>
+					</div>
+					<div class="group">
+						<div class="service_QQ" id="service_QQ"></div>
+						<div>QQ客服</div>
+					</div>
+
+					<div class="group">
+						<div class="service_weixin" id="service_weixin"></div>
+						<div>微信客服</div>
+					</div>
+
+					<div class="group" id="service_more_btn">
+						<div class="service_more"></div>
+						<div>更多帮助</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="main_content">
+		    <div class="content">
+		    		<div class="head">
+                <div class="game_result_icon"></div>
+                <div class="page_title">赛事结果</div>
+                <div class="date_select">
+                	<select id="day" onchange="choosedate(this.value)">
+
+                <!-- START BLOCK : gameHistoryDetailTitleBlock -->
+                    <option value="{datetime}"  {s}>{dayshow}星期{w}</option>
+                <!-- END BLOCK : gameHistoryDetailTitleBlock -->    
+                	</select>
+                </div>
+            </div>
+            <div class="page_title_black_line"></div>
+
+		        <div class="game_result_wrap">
+		            <table class="game_result_head">
+		                <tr>
+		                    <td class="cell_14">开赛时间</td>
+		                  <!--  <td class="cell_14">完赛时间</td>-->
+		                    <td class="cell_15">赛事</td>
+		                    <td class="cell_16">波胆</td>
+		                    <td class="cell_17">上半场波胆</td>
+		                    <td class="cell_18">总得分</td>
+		                    <td class="cell_19">首入球时间</td>
+		                </tr>
+		            </table>
+		            <table class="game_result_content">
+		            <!-- START BLOCK : gameHistoryDetailcontentBlock--> 
+		                <tr>
+		                    <td class="cell_14">{opendate}<br>{opentime}</td>
+		                    <!--  <td class="cell_14">{timestamp_date}<br>{timestamp_time}</td>-->
+		                    <td class="cell_15">
+		                        【{competition}】<br>
+		                        {host}(主) vs {guest}</td>
+		                    <td class="cell_16">{correctScore}</td>
+		                    <td class="cell_17">{halfTimeScore}</td>
+		                    <td class="cell_18">{totalscore}</td>
+		                    <td class="cell_19">{timeName}</td>
+		                </tr>
+		            <!-- END BLOCK : gameHistoryDetailcontentBlock-->     
+		            </table>
+		        </div>
+		    	  
+				</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+  <div class="footer">
+		<div class="footer_container">
+			<div class="footer_black_line"></div>
+			<div>
+				<div class="sup_logo"></div>
+				<div class="footer_text">&copy; burgundy corporate tower,sen gil puyat ave makati city +63 977 103 6903
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/mainJs.js"></script>
+	<script src="../js/v2.js"></script>
+	<script src="../js/tgjs.js"></script>
+	<script src="../js/sysDateTime.js"></script>
+	<script>
+		runTime();
+		 //   $(".comment_input textarea").scroll(function(){  
+			// 	var height = $(this).height()+30;
+			// 	$(this).height(height);
+			// });
+
+	</script>
+
+</body>
+</html>
