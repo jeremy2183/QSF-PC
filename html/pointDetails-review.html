@@ -126,179 +126,76 @@
 			
 			<div class="main_content">
 		    <div class="content">
-		    		<div class="head">
-                <div class="c2c_icon"></div>
-                <div class="page_title">会员互转</div>
+		    	  <div class="head">
+              <div class="wd_all_icon"></div>
+              <div class="page_title">交易记录</div>
+              <div class="wd_btn_groupx">
+                  <div class="record_select">
+                      <select id="wdrecord"  onchange="wdrecord(this.value)">
+                          <option  value="3" {s3}>全部</option>
+                          <option  value="1" {s1}>充值记录</option>
+                          <option  value="2" {s2}>提领记录</option>
+                      </select>
+                  </div>
+                  <div class="all_page_select">
+                  	<select id="p" onchange="page()">
+                       <option value="1" selected="selected">第01页</option>
+                  	</select>
+                	</div>
+              </div>
             </div>
+
             <div class="page_title_black_line"></div>
             <div class="wd_btn_group">
                 <a class="wd_btn1" href="pointDeposit-review.html">充值专区</a>
                 <a class="wd_btn2" href="pointRecive-review.html">提领专区</a>
-                 <a class="wd_btn9" href="#">会员互转</a>
-                <a class="wd_btn3" href="pointDetails-review.html">交易纪录</a>
+                <a class="wd_btn9" href="pointc2c-review.html">会员互转</a>
+                <a class="wd_btn3 btn_active">交易记录</a>
+                
             </div>
-			
-						<div class="onlinebank_content">
-							<div id="bankStep1">
-									<div class="step_title">步骤一.请输入互转资料</div>
-									<div class="onlinebank_block">
-										<div class="onlinebank_small_block">
-											<div class="onlinebank_table">
-												<div class="onlinebank_row">
-													<div class="onlinebank_cell cell_30"><font color="#666666">转出账号：</font></div>
-													<div class="onlinebank_cell"><input type="text" readonly="readonly" value="PZQ422"></div>
-												</div>
-												<div class="onlinebank_row">
-													<div class="onlinebank_cell cell_30"><font color="#08377E">转入帐号：</font></div>
-													<div class="onlinebank_cell"><input type="text" id="username" name="username" placeholder="请输入转入会员帐号"></div>
-												</div>
-												<div class="onlinebank_row">
-													<div class="onlinebank_cell cell_30"><font color="#08377E">转入金额：</font></div>
-													<div class="onlinebank_cell"><input type="text" id="amount" name="amount" placeholder="请输入金额"></div>
-												</div>
-												<div class="onlinebank_row">
-													<div class="onlinebank_cell cell_30"><font color="#08377E">交易密码：</font></div>
-													<div class="onlinebank_cell"><input type="password" id="wdpw" name="wdpw" placeholder="请输入密码"></div>
-												</div>
-												<div class="onlinebank_row">
-													<div class="onlinebank_cell cell_30"><font color="#666666">手机门号：</font></div>
-														<div class="onlinebank_cell">
-															<div class="order03_cell">
-												        <select class="area" id="area" name="area" >
-																	<option value="86">中国</option>
-																	<option value="886">台湾</option>
-																	<option value="852">香港</option>
-																	<option value="853">澳门</option>
-																	<option value="81">日本</option>
-																	<option value="60">马来西亚</option>
-																	<option value="84">越南</option>
-																	<option value="62">印尼</option>
-																	<option value="66">泰国</option>
-																	<option value="61">澳洲</option>
-																	<option value="65">新加坡</option>
-																	<option value="63">菲律宾</option>
-																	<option value="971">阿拉伯联合大公国</option>
-																	<option value="855">柬埔寨</option>
-										           	</select>
-										          </div>
-						              		<div class="order03_cell">
-						              			<input type="text" name="mobile" value="0928***967" readonly="readonly" style="width: 170px">
-						              		</div>
-						              	</div>	
-												</div>
-												<div class="onlinebank_row">
-													<div class="onlinebank_cell cell_30"><font color="#666666">手机验证：</font></div>
-													<div class="order03_cell"><input type="text" id="smscode" name="smscode" placeholder="输入验证码" style="width: 204px"><button class="send_pwd" onclick="checksms()"><font color="#FFFFFF">传送验证码</font></button></div>
-												</div>
-											</div>
-										</div>
-
-
-										<div class="onlinebank_small_block">
-											<div class="onlinebank_notice">
-												<div class="notice_title_table">
-													<div class="notice_title_row">
-														<div class="notice_title_cell cell_28 ">
-															<div class="dotted_line"></div>
-														</div>
-														<div class="notice_title_cell cell_29">
-															<div class="wd_notice_group">
-																<div class="notice_icon"></div>
-																<div class="wd_notice_text">注意事项</div>
-																<div class="notice_icon"></div>
-															</div>
-														</div>
-														<div class="notice_title_cell cell_28">
-															<div class="dotted_line"></div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="onlinebank_notice">
-												<ul>
-													<li>请确实核实点数接收的会员帐号，<font color="#C1272D">一旦确认移转，平台恕不负责</font>。</li>
-													<li>转出点数将即刻生效，并于您的帐户扣除。</li>
-													<li>最低转出金额为１００RMB。</li>
-													<li>点数接收会员钱包有<font color="#C1272D">24小时冻结期</font>，过后方可进行提领操作。</li>	
-													<li>点数移转属平台服务功能，若会员间点数移转有争议，与本平台无关。
-													</li>		
-												</ul>
-												<button class="onlinebank_c2c" onclick="c2cstep2()">下一步</button>	
-											</div>
-										</div>
-									</div>
-							</div>
-
-							<div id="bankStep2" style="display:none">
-									<div class="step_title">步骤二.请确认互转资料是否正确</div>
-									<div class="onlinebank_block">
-										<div class="onlinebank_small_block">
-											<div class="onlinebank_table">
-												<div class="onlinebank_row">
-													<div class="onlinebank_cell cell_30"><font color="#666666">交易时间：</font></div>
-													<div class="onlinebank_cell cell_31">2018-08-09 15:53:12</div>
-												</div>
-												<div class="onlinebank_row">
-													<div class="onlinebank_cell cell_30"><font color="#666666">转出帐号：</font></div>
-													<div class="onlinebank_cell cell_31">PZQ422</div>
-												</div>
-												<div class="onlinebank_row">
-													<div class="onlinebank_cell cell_30"><font color="#08377E">转入帐号：</font></div>
-													<div class="onlinebank_cell cell_31" ><input id="icomeuser" type="text" readonly="readonly"></div>
-												</div>
-												<div class="onlinebank_row">
-													<div class="onlinebank_cell cell_30"><font color="#08377E">转入金额：</font></div>
-													<div class="onlinebank_cell cell_31"><input id="payamount" type="text" readonly="readonly"></div>
-												</div>
-											</div>
-											<div class="onlinebank_small_block">
-
-											</div>
-										</div>
-										<div class="onlinebank_small_block">
-											<div class="onlinebank_notice">
-												<div class="notice_title_table">
-													<div class="notice_title_row">
-														<div class="notice_title_cell cell_28 ">
-															<div class="dotted_line"></div>
-														</div>
-														<div class="notice_title_cell cell_29">
-															<div class="wd_notice_group">
-																<div class="notice_icon"></div>
-																<div class="wd_notice_text">注意事项</div>
-																<div class="notice_icon"></div>
-															</div>
-														</div>
-														<div class="notice_title_cell cell_28">
-															<div class="dotted_line"></div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="onlinebank_notice">
-												<ul>
-													<li>请确实核实点数接收的会员帐号，<font color="#C1272D">一旦确认移转，平台恕不负责</font>。</li>
-													<li>转出点数将即刻生效，并于您的帐户扣除。</li>
-													<li>最低转出金额为１００RMB。</li>
-													<li>点数接收会员钱包有<font color="#C1272D">24小时冻结期</font>，过后方可进行提领操作。</li>	
-													<li>点数移转属平台服务功能，若会员间点数移转有争议，与本平台无关。
-													</li>	
-												</ul>
-												<div class="notice_text">
-												<button class="onlinebank_c2c" onclick='checkc2c()' onKeyDown="return false;"><font color="#0085A">确认转出</font></button>
-												</div>
-											</div>
-										</div>
-									</div>
-							</div>
-						</div>
-
+            <table class="wd_all_head">
+                <tr>
+                    <td class="cell_32">交易日期</td>
+                    <td class="cell_33">交易类别</td>
+                    <td class="cell_34">交易方式</td>
+                    <td class="cell_35">交易金额</td>
+                    <td class="cell_36">交易状态</td>
+                    <td class="cell_37">余额</td>
+                    <td class="cell_38">备注</td>
+                </tr>
+            </table>
+            <table class="wd_all_content">
+            <!-- START BLOCK : listMoneySavedetailBlock -->
+                <tr>
+                    <td class="cell_32">{requestdate}<br>{requesttime}</td>
+                    <td class="cell_33">{action}</td>
+                    <td class="cell_34"><font color="{color_save}">{saveBy}</font></td>
+                    <td class="cell_35">{requestAmount}</td>
+                    <td class="cell_36 "><font color="{color_step}">{step}</font></td>
+                    <td class="cell_37">&yen;{mergeTotal}</td>
+                    <td class="cell_38" style="text-align:left;padding-left:5px;">{noteTag}</td>
+                <!-- START BLOCK : listMoneySavedetailBlock -->    
+                </tr>
+                
+            </table>
+            <!-- START BLOCK : listMoneySaveBlock -->
+            <table class="wd_all_total">
+                <tr>
+                    <td class="cell_32">合计</td>
+                    <td class="cell_33"></td>
+                    <td class="cell_35"></td>
+                    <td class="cell_35">&yen;{total}</td>
+                    <td class="cell_36"></td>
+                    <td class="cell_37"></td>
+                    <td class="cell_38"></td>
+                </tr>
+            </table>
+            <!-- END BLOCK : listMoneySaveBlock -->    
 				</div>
-			</div>	
-		
+			</div>
+			
 		</div>
 	</div>
-			
 
 	<div id="more">
 			<div class="more_block">
@@ -535,13 +432,14 @@
 		</div>
 	</div>
 
+
+
 	<script src="../js/jquery-3.2.1.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/mainJs.js"></script>
 	<script src="../js/v2.js"></script>
 	<script src="../js/tgjs.js"></script>
 	<script src="../js/sysDateTime.js"></script>
-	<script src="../js/iziModal.min.js"></script>
 	<script>
 		runTime();
 		 //   $(".comment_input textarea").scroll(function(){  
