@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+	<meta name="viewport" content="width=1280">
+	<title>history</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/jquery-ui.css">
+	<link rel="stylesheet" href="../css/mainStyle.css">
+	<link rel="stylesheet" href="../css/races_news.css">
+	<script>
+		var now = new Date();
+		var year = now.getFullYear();
+		var month = now.getMonth();
+		var d = now.getDate();
+		var h = now.getHours();
+		var m = now.getMinutes();
+		var s = now.getSeconds();
+
+		var TodayStr = year + "-" + month +"-"+ d +" "+ h +":" + m +":"+ s ;
+	</script>
+</head>
+<body>
+	<div class="top_nav nav navbar-fixed-top">
+    <div class="date" id="sysDateTime"></div>
+    <div class="black_dash"></div>
+    <div class="marquee_icon"></div>
+    <div class="marquee_content">
+        <marquee>「重要公告」TG平台提醒广大会员，近期出现许多黑网打著反波胆名义，进行资金盘吸金，或利用保证获利口号行欺诈等不法行为，TG平台在此除了严厉斥责不肖黑网，也恳请会员慎选平台，以免资金遭受损失。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;「『赛事公告』」7-12 / 08:30	 [ 美甲      ]  OKC能量 v 拉斯维加斯光  因国际资料传递错误该赛事 07-12 / 08:10后所有注单无效&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;「『赛事公告』」07-11 / 23:59	 [ 友谊赛      ]  洛里昂 v 布雷斯特  因比赛时间不足法定九十分钟，所有注单取消。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;「『赛事公告』」07-10 / 23:59	 [ 欧霸杯 ]  卡拉卡斯维克 v 萨基列斯   因比赛改期，所有注单无效。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;「『赛事公告』」07-10 / 21:00 [ 友谊赛 ] 希姆基 v 斯特罗吉诺  因国际资料传递错误该赛事 0710 / 19:00后所有注单无效。</marquee>
+    </div>
+    <div class="nav_info">
+        <div class="title">&nbsp;</div>
+        <div class="box_border">
+            <div class="user_icon"></div>
+            <div class="user_name">PZQ422</div>
+        </div>
+        <div class="title">&nbsp;</div>
+        <div class="box_border2">
+            <div class="acc_icon"></div>
+            <div class="acc_money" id="quotaView">0.00</div>
+			<input type="hidden" id="memberQuota" value="0">
+        </div>
+		<!-- <div class="box_border3"><div class="online_icon"></div><div class="online_num">356</div></div>-->
+    </div>
+	</div>
+
+<div class="whole_table">
+	<div class="whole">
+		<div class="side_nav">
+			<div class="logo_wrap"><div class="tg_logo"  onclick="javascript:location.href='./'"></div></div>
+			<div class="side_nav_content">
+				<ul>
+                    <li id="hotnews">
+                        <div class="side_nav_icon0"></div>
+                        今日头条
+                    </li>
+					<li id="market_list">
+						<div class="side_nav_icon1"></div>
+						市场列表
+					</li>
+					<li id="trade_detail">
+						<div class="side_nav_icon2"></div>
+						交易明细
+					</li>
+					<li id="history">
+						<div class="side_nav_icon3"></div>
+						历史帐务
+					</li>
+					<li id="game_result">
+						<div class="side_nav_icon4"></div>
+						赛事结果
+					</li>
+					<li id="live_score">
+						<div class="side_nav_icon6"></div>
+						即时比分
+					</li>
+					<li id="announce">
+						<div class="side_nav_icon5"></div>
+						公&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;告
+					</li>
+				</ul>
+			</div>
+			<div class="black_line"></div>
+			<ul>
+				<li class="member_text" id="my">
+					<div class="member_icon"></div>
+					我&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;的
+				</li>
+			</ul>
+			<button class="nav_wd_btn" id="wd">充值提领</button>
+			<button class="log_out" id="log_out">登出</button>
+			<div class="black_line"></div>
+
+			<div class="online_24">【 24H线上客服 】</div>
+			<div>
+				<div class="group">
+					<div class="service_online" onclick="window.open('https://v88.live800.com/live800/chatClient/chatbox.jsp?companyID=698946&configID=1586&jid=5625358570&s=1')"></div>
+					<div>线上客服</div>
+				</div>
+				<div class="group">
+					<div class="service_QQ" id="service_QQ" onclick="icon('QQ')"></div>  <!--QQ 按這裡-->
+					<div>QQ客服</div>
+				</div>
+							
+				<div class="group">
+					<div class="service_weixin" id="service_weixin" onclick="icon('WEI')"></div> <!--微信按這裡-->
+					<div>微信客服</div>
+				</div>
+
+				<div class="group" id="service_more_btn">
+					<div class="service_more"></div>
+					<div>更多帮助</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="main_content">
+		    <div class="content">
+		        <div class="head">
+		            <div class="wd_chinabank_icon"></div>
+		            <div class="page_title">提领专区</div>
+		        </div>
+		        <div class="page_title_black_line"></div>
+		        <div class="wd_btn_group">
+		            <a class="wd_btn1" href="pointDeposit.php">充值专区</a>
+		            <a class="wd_btn2 btn_active">提领专区</a>
+		            <a class="wd_btn9"  onclick="c2cphp(1)">会员互转</a>
+		            <a class="wd_btn3" href="pointDetails.php">交易纪录</a>
+		        </div>
+		        <div class="onlinebank_content">
+		            <div class="step_title">请选择提款交易平台/填写汇款帐户金额</div>
+		            <div class="onlinebank_block">
+		                <div class="onlinebank_small_block">
+		                    <div class="onlinebank_table"> 
+		                        <div class="onlinebank_row">
+		                            <div class="onlinebank_cell cell_30">银行名称：</div>
+		                            <div class="onlinebank_cell">
+		                            	<select id="bankid" name="bankid" onChange="bankid(this.value);" >
+		                                <option value="1" >中国工商银行</option>
+		                                <option value="2" >中国建设银行</option>
+		                                <option value="3" >中国招商银行</option>
+		                                <option value="4" >中国交通银行</option>
+		                                <option value="5" >中国农业银行</option>
+		                                <option value="6" >中国邮政储蓄</option>
+		                                <option value="7" >中国银行</option>
+		                                <option value="8" >中国民生银行</option>
+		                                <option value="9" >上海浦东银行</option>
+		                                <option value="10" >上海银行</option>
+		                                <option value="11" >中信银行</option>
+		                                <option value="12" >兴业银行</option>
+		                                <option value="13" >北京银行</option>
+		                                <option value="14" >华夏银行</option>
+		                                <option value="15" >深圳发展银行</option>
+		                                <option value="25" >中国光大银行</option>
+		                                <option value="26" >上海浦东发展银行</option>
+		                                <option value="39" >平安银行</option>
+		                                <option value="49" >成都银行</option>
+		                                <option value="53" >广发银行</option>
+		                                <option value="169" >厦门银行</option>
+		                            	</select>
+		                          	</div>
+		                        </div>
+		                        <div class="onlinebank_row">
+		                            <div class="onlinebank_cell cell_30">银行帐号：</div>
+		                            <div class="onlinebank_cell"><input id="account" type="text"  value="" required oninvalid="setCustomValidity('请输入银行帐号');" oninput="setCustomValidity('');" ></div>
+		                        </div>
+
+		                        <div class="onlinebank_row">
+		                            <div class="onlinebank_cell cell_30">提款户名：</div>
+		                            <div class="onlinebank_cell"><input id="accountName" type="text" readonly value="特特" required oninvalid="setCustomValidity('请输入提款户名');" oninput="setCustomValidity('');" ></div>
+		                        </div>
+		                        <div class="onlinebank_row">
+		                            <div class="onlinebank_cell cell_30">提款金额：</div>
+		                            <div class="onlinebank_cell"><input id="amount" type="text" required oninvalid="setCustomValidity('请输入提款金额');" oninput="setCustomValidity('');" ></div>
+		                        </div>
+		                        <div class="onlinebank_row">
+		                            <div class="onlinebank_cell cell_30">交易密码：</div>
+		                            <div class="onlinebank_cell"><input id="widthdrawpassword" type="password" required oninvalid="setCustomValidity('请输入交易密码');" oninput="setCustomValidity('');" ></div>
+		                        </div>
+											</div>
+		                    <input type="hidden" id="accountName" name="accountName" value='特特'>
+		                    <input type="hidden" id="account"     name="account"     value=''>
+		                    <input type="hidden" id="bankname"    name="bankname"    value=''>
+		                    <input type="hidden" id="fee"         name="fee"         value="0">
+		                    <input type="hidden" id="reached"     name="reached"     value="0">
+		                    <input type="hidden" id='savenotice' name="savenotice" value="">
+		                    <div class="china_btn_block">
+		                    	<button id='confirm' class="confirm_trade" onclick="widthdraw()" onKeyDown="return false;">完成填写送出申请</button>
+		                    </div>
+		                </div>
+		                <div class="onlinebank_small_block">
+		                    <div class="choose_bank">
+		                        <div class="chinabank_logo"></div>
+		                        <!--<input type="checkbox" class="checkbox_chinabank">--><label class="china_bank">中国银联现金提款</label>
+		                    </div>
+		                    <div class="onlinebank_notice">
+		                        <div class="notice_title_table">
+		                            <div class="notice_title_row">
+		                                <div class="notice_title_cell cell_28 ">
+		                                    <div class="dotted_line"></div>
+		                                </div>
+		                                <div class="notice_title_cell cell_29">
+		                                    <div class="wd_notice_group">
+		                                        <div class="notice_icon"></div>
+		                                        <div class="wd_notice_text">注意事项</div>
+		                                        <div class="notice_icon"></div>
+		                                    </div>
+		                                </div>
+		                                <div class="notice_title_cell cell_28">
+		                                    <div class="dotted_line"></div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <div class="onlinebank_notice">
+		                        <ul>
+		                            <li>最低申请点数为100点以上。</li>
+		                            <li>每周可享提领5次免手续费,如您欲再提领,本公司将收取提领金额之5%做为行政处理费。</li>
+		                            <li>第一次提交申请送出后即会绑定该帐户，请务必将您的银行帐户填写正确，若提供之帐号有误导致损失，本公司恕不负责。</li>
+		                        </ul>
+		                        <div class="notice_text">P.S.如利用本平台进行任何洗钱诈骗行为,本公司将保留权力终止会员服务及冻结其帐户。</div>
+		                    </div>
+		                </div>
+		            </div>
+
+		        </div>
+		    </div>
+		</div>
+	</div>
+</div>
+
+<div id="more">
+	<div class="more_block">
+	    <div class="more_row">
+	        <div class="more_cell">
+	            <div class="group">
+	                <div class="help_center" onclick="javascript:location.href='helpcenter.php'"></div>
+	                <div>帮助中心</div>
+	            </div>
+	        </div>
+	        <div class="more_cell">
+	            <div class="group">
+	                <div class="cooperate" onclick="javascript:location.href='tgContact.php'"></div>
+	                <div>与我们合作</div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="more_row">
+	        <div class="more_cell">
+	            <div class="group">
+	                <div class="game_result" onclick="javascript:location.href='statistics.php'"></div>
+	                <div>历年赛事结果</div>
+	            </div>
+	        </div>
+	        <div class="more_cell">
+	            <div class="group">
+	                <div class="rules" onclick="javascript:location.href='rule.php'"></div>
+	                <div>规则说明</div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="more_row">
+	        <div class="more_cell">
+	            <div class="group">
+	                <div class="discuss"  onclick="window.open('http://f.tg333.net/')"></div>
+	                <div>讨论区</div>
+	            </div>
+	        </div>
+	        <div class="more_cell">
+	            <div class="group">
+	                <div class="relate_web" onclick="javascript:location.href='relate.php'"></div>
+	                <div>相关网站</div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="more_row">
+	        <div class="more_cell">
+	            <div class="group">
+	                <div class="about_us"  onclick="javascript:location.href='about.php'"></div>
+	                <div>关于淘金网</div>
+	            </div>
+	        </div>
+	        <div class="more_cell">
+	            <div class="group">
+	                <div></div>
+	                <div></div>
+	            </div>
+	        </div>
+	    </div>
+
+	</div>
+</div>
+
+<!--<div id="Modal_times" class="cover">
+    <div class="modal_times">
+        <div class="modal_head">交易成功
+            <div class="close_icon"></div>
+        </div>
+    <div class="submit_bg">
+        <div class="submit_text">提醒您，截至目前为止</div>
+        <div class="submit_text"><span>免手续费</span>优惠</div>
+        <div id="feecircle" class="countdown2"></div>
+        <div class="submit_text blue_bg">每周(一)凌晨00：00重新计算</div>
+        <div class="submit_btn_group">
+            <button class="submit_confirm2" id="confirm_next" onclick="javascript:location.href='./pointDetails.php'">确定</button>
+        </div>
+    </div>
+    </div>
+</div>-->
+
+<div id="Modal_times" class="cover_order"><!--free fee-->
+  <div class="modal_times">
+      <div class="modal_times_mark_wrap"><div class="modal_times_mark"></div></div>
+      <div class="modal_times_head">交易次数提醒
+          <div class="close_icon" onclick="javascript:location.href='./pointDetails.php'"></div>
+      </div>
+      <div class="modal_times_text">
+          <div class="text_line1">提醒您！截至目前为止</div>
+          <div class="text_line2">免手续费优惠</div>
+      </div>
+      <div id="countdown"></div>
+       <div class="daily_reset_wrap"><div class="daily_reset">每周(一)凌晨00：00重新计算</div></div>
+       <div class="modal_times_btn_wrap"><button class="modal_times_confirm" onclick="javascript:location.href='./pointDetails.php'">确&nbsp;定</button></div>
+  </div>
+</div>
+
+<div id="Modal_times_none" class="cover_order"><!--0.05 fee-->
+    <div class="modal_times_none">
+        <div class="modal_times_mark_wrap"><div class="modal_times_mark"></div></div>
+        <div class="modal_times_head">交易次数提醒
+            <div class="close_icon" onclick="javascript:location.href='./pointDetails.php'"></div>
+        </div>
+        <div class="modal_times_text">
+            <div class="text_line1">提醒您！截至目前为止</div>
+            <div class="text_line2">免手续费优惠</div>
+        </div>
+        <div id="countdown_money"></div>
+        <div class="modal_times_text">
+            <div class="text_line3">若继续交易将收取<span>５％</span>行政费用点数<br>
+                    <span id='feecount'></span><br>
+                   于您申请的<span>提领金额内扣除</span>。</div>
+        </div>
+
+        <div class="daily_reset_wrap"><div class="daily_reset">每周(一)凌晨00：00重新计算</div></div>
+        <div class="modal_times_btn_wrap">
+            <button id=payfee class="modal_times_confirm2" onclick="feemoneytips()">确&nbsp;定</button>
+            <button class="modal_times_cancel">取&nbsp;消</button>
+        </div>
+    </div>
+</div>
+
+
+<!--這段是客服訊息-->
+<div id="Modal_service" class="cover_order">
+    <div class="modal_service">
+        <div class="modal_head_pmode"><div id='service'></div>
+            <div class="close_icon"></div>
+        </div>
+        <div id="QRcode" style="text-align:center;"></div>
+       
+    </div>
+</div>
+<!--這段是客服訊息 結束-->
+
+<!-- 提示訊息 開始-->
+<div id="msgx" class="cover">
+    <div class="modal_success_wd">
+        <div class="modal_head"><span id="title"></span>
+            <div id="popupClose" class="close_icon" onclick="msgx()"></div>
+        </div>
+        <div class="success_wrap">
+            <div id="icon" class="success_icon"></div>
+            <div id="fontstyle" class="success_text"><div id="text1"></div><span id="text2" class="success_text2"></span></div>
+        </div>
+    </div>
+</div>
+<!-- 提示訊息 結束-->
+
+<!-- c2c 交易成功开始 -->
+<div id="Modal_order03" class="cover_order03">
+    <div class="modal_order03">
+        <div class="success_icon_wrap"><div class="success_icon"></div></div>
+        <div class="modal_head_order03">会员互转-交易完成</div>
+        <div class="order03_warp">
+            <div class="order03_table">
+                <div class="order03_row">
+                    <div class="order03_cell cell_49"><div class="title_bg">交易单号</div></div>
+                    <div class="order03_cell cell_50">
+                        <div class="order03_text" id="res_orderNum"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="order03_table">
+                <div class="order03_row">
+                    <div class="order03_cell cell_49">
+                        <div class="title_bg">交易時间</div>
+                    </div>
+                    <div class="order03_cell cell_50">
+                        <div class="order03_text" id="res_orderTime"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="order03_table">
+                <div class="order03_row">
+                    <div class="order03_cell cell_49">
+                        <div class="title_bg">转出帐号</div>
+                    </div>
+                    <div class="order03_cell cell_50">
+                        <div class="order03_text" id="payuser"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="order03_table">
+                <div class="order03_row">
+                    <div class="order03_cell cell_49">
+                        <div class="title_bg">转入帐号</div>
+                    </div>
+                    <div class="order03_cell cell_50">
+                        <div class="order03_text" id="incomeuser"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="order03_table">
+                <div class="order03_row">
+                    <div class="order03_cell cell_49">
+                        <div class="title_bg">转入金额</div>
+                    </div>
+                    <div class="order03_cell cell_50">
+                        <div class="order03_text" id="incomeamount"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="order03_table">
+                <button class="onlinebank_c2c" onclick="javascript:location.href='pointDetails.php'">前往交易记录</button>
+            </div>
+       </div>
+    </div>
+</div>
+<!-- c2c 交易成功 结束-->
+
+
+<div id="Loading" style="display:none">
+<div class="cover_loading"></div>
+    <div id="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+</div>    
+<div class="footer">
+    <div class="footer_container">
+    <div class="footer_black_line"></div>
+    <div>
+        <div class="sup_logo"></div>
+        <div class="footer_text">&copy; burgundy corporate tower,sen gil puyat ave makati city +63 945 129 9918</div>
+    </div>
+  </div>
+</div> 
+
+
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/mainJs.js"></script>
+	<script src="../js/v2.js"></script>
+	<script src="../js/tgjs.js"></script>
+	<script src="../js/sysDateTime.js"></script>
+	<script src="../js/countdown.js"></script>
+	<script>
+		runTime();
+		 //   $(".comment_input textarea").scroll(function(){  
+			// 	var height = $(this).height()+30;
+			// 	$(this).height(height);
+			// });
+
+	</script>
+
+</body>
+</html>
