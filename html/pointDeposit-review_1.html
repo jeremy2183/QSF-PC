@@ -104,7 +104,7 @@
 				<div class="online_24">【 24H線上客服 】</div>
 				<div>
 					<div class="group">
-						<div class="service_online"></div>
+						<div class="service_online" onclick="window.open('https://v88.live800.com/live800/chatClient/chatbox.jsp?companyID=698946&amp;configID=1586&amp;jid=5625358570&amp;s=1')"></div>
 						<div>线上客服</div>
 					</div>
 					<div class="group">
@@ -126,14 +126,168 @@
 			
 			<div class="main_content">
 		    <div class="content">
-		    	  
+		    	 <!-- START BLOCK : pointDepositTitle -->
+            <div class="head">
+                <div class="wd_icon"></div>
+                <div class="page_title">充值专区</div>
+            </div>
+            <div class="page_title_black_line"></div>
+            <div class="wd_btn_group">
+                <a class="wd_btn1 btn_active" href="pointDeposit-review.html">充值专区</a>
+                <a class="wd_btn2" href="pointRecive-review.html">提领专区</a>
+                <a class="wd_btn9" href="pointc2c-review.html">会员互转</a>
+                <a class="wd_btn3" href="pointDetails-review.html">交易记录</a>
+            </div>
+						<!-- END BLOCK : pointDepositTitle --> 
+						
+						<!-- START BLOCK : pointDepositBank -->
+						<div class="onlinebank_content">
+							<div id="bankStep1">
+								<div class="step_title">步骤一.请选择银行</div>
+								<div class="onlinebank_block">
+									<div class="onlinebank_small_block">
+									<div class="onlinebank_table">
+										<div class="onlinebank_row">
+											<div class="onlinebank_cell cell_30">选择银行：</div>
+											<div class="onlinebank_cell"><select id='bankIndex' name='bankIndex' onchange='' class='nomoInput nomoSelectBarWidth' ><option value='207' >建设银行</option><option value='177' >成都银行</option></select></div>
+										</div>
+										<div class="onlinebank_row">
+											<div class="onlinebank_cell cell_30">输入金额：</div>
+											<div class="onlinebank_cell"><input type="text" id="amount" name="amount"></div>
+										</div>
+									</div>
+									<div class="onlinebank_table">
+										  <button class="onlinebank_submit" onclick="bankDepositStep2()">下一步</button>
+										  <input type="hidden" id="ptype" name="ptype" value="1">
+									</div>
+									</div>
+									<div class="onlinebank_small_block">
+										<div class="onlinebank_notice">
+											<div class="notice_title_table">
+												<div class="notice_title_row">
+													<div class="notice_title_cell cell_28 ">
+														<div class="dotted_line"></div>
+													</div>
+													<div class="notice_title_cell cell_29">
+														<div class="wd_notice_group">
+															<div class="notice_icon"></div>
+															<div class="wd_notice_text">注意事项</div>
+															<div class="notice_icon"></div>
+														</div>
+													</div>
+													<div class="notice_title_cell cell_28">
+														<div class="dotted_line"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="onlinebank_notice">
+											<ul>
+												<li>请严格依照输入金额打款至指定帐户，如造成充值掉单或入款至已过期帐号，本公司恕不负责。</li>
+												<li>最低存款金额为１００RMB。</li>
+											</ul>
+											<div class="notice_text">P.S.如利用本平台进行任何洗钱诈骗行为，本公司保有权力终止会员服务及冻结其帐户。</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="bankStep2" style="display:none">
+								<div class="step_title">步骤二.请汇款至下方银行帐户</div>
+								<div class="onlinebank_block">
+									<div class="onlinebank_small_block">
+										<div class="onlinebank_table">
+											<div class="onlinebank_row">
+												<div class="onlinebank_cell cell_30">银　行　：</div>
+												<div class="onlinebank_cell cell_31" id="fbank"></div>
+											</div>
+											<div class="onlinebank_row">
+												<div class="onlinebank_cell cell_30">支　行　：</div>
+												<div class="onlinebank_cell cell_31" id="fbranch"></div>
+											</div>
+											<div class="onlinebank_row">
+												<div class="onlinebank_cell cell_30">户　名　：</div>
+												<div class="onlinebank_cell cell_31" id="fname"></div>
+											</div>
+											<div class="onlinebank_row">
+												<div class="onlinebank_cell cell_30">帐　号　：</div>
+												<div class="onlinebank_cell cell_31" id="faccount"></div>
+											</div>
+											<div class="onlinebank_row">
+												<div class="onlinebank_cell cell_30">输入金额：</div>
+												<div class="onlinebank_cell cell_31" id="amounts"></div>
+											</div>
+										</div>
+									</div>
+									<div class="onlinebank_small_block">
+										<div class="onlinebank_notice">
+											<div class="notice_title_table">
+												<div class="notice_title_row">
+													<div class="notice_title_cell cell_28 ">
+														<div class="dotted_line"></div>
+													</div>
+													<div class="notice_title_cell cell_29">
+														<div class="wd_notice_group">
+															<div class="notice_icon"></div>
+															<div class="wd_notice_text">注意事项</div>
+															<div class="notice_icon"></div>
+														</div>
+													</div>
+													<div class="notice_title_cell cell_28">
+														<div class="dotted_line"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="onlinebank_notice">
+											<div class="notice_text">请严格依照输入金额打款至指定帐户，如造成充值掉单或入款至已过期帐号，本公司恕不负责。</div>
+										</div>
+									</div>
+								</div>
+								<div class="step_title">步骤三.送出申请</div>
+								<div class="onlinebank_block">
+										<div class="onlinebank_small_block">
+											  <button class="onlinebank_submit" onclick='bankDepositSubmit()' onKeyDown="return false;">完成汇款送出申请</button>
+										</div>
+										<div class="onlinebank_small_block">
+											<div class="onlinebank_notice">
+												<div class="notice_title_table">
+													<div class="notice_title_row">
+														<div class="notice_title_cell cell_28 ">
+															<div class="dotted_line"></div>
+														</div>
+														<div class="notice_title_cell cell_29">
+															<div class="wd_notice_group">
+																<div class="notice_icon"></div>
+																<div class="wd_notice_text">注意事项</div>
+																<div class="notice_icon"></div>
+															</div>
+														</div>
+														<div class="notice_title_cell cell_28">
+															<div class="dotted_line"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="onlinebank_notice">
+												<ul>
+													<li>请先完成打款程序后，再点击『完成汇款送出申请』，以便系统加快充值速度。</li>
+													<li>打款完成后，请保留单据以利核对并保障您的权益。</li>
+													<div class="notice_text">PS.如利用本平台进行任何洗钱诈骗行为，本公司将保有权力终止会员服务及冻结其帐号。</div>
+												</ul>
+											<!--	<div class="notice_text">P.S.如利用本平台进行任何洗钱诈骗行为，本公司将保有权力终止会员服务及冻结其帐号。</div>
+											</div>-->
+											</div>
+										</div>
+									</div>
+							</div>
+						</div>
+
 				</div>
 			</div>
 
 			
 		</div>
 	</div>
-
 
 	<div id="more">
 			<div class="more_block">
@@ -363,7 +517,7 @@
 	        <div class="dot"></div>
 	    </div>
 	</div>    
-
+	
   <div class="footer">
 		<div class="footer_container">
 			<div class="footer_black_line"></div>
@@ -378,10 +532,12 @@
 
 
 	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script src="../js/jquery-ui.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/mainJs.js"></script>
 	<script src="../js/v2.js"></script>
 	<script src="../js/tgjs.js"></script>
+	<script src="../js/iziModal.min.js"></script>
 	<script src="../js/sysDateTime.js"></script>
 	<script>
 		runTime();

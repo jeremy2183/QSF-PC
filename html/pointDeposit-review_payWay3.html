@@ -104,7 +104,7 @@
 				<div class="online_24">【 24H線上客服 】</div>
 				<div>
 					<div class="group">
-						<div class="service_online"></div>
+						<div class="service_online" onclick="window.open('https://v88.live800.com/live800/chatClient/chatbox.jsp?companyID=698946&amp;configID=1586&amp;jid=5625358570&amp;s=1')"></div>
 						<div>线上客服</div>
 					</div>
 					<div class="group">
@@ -126,14 +126,125 @@
 			
 			<div class="main_content">
 		    <div class="content">
-		    	  
+		    	  <!-- START BLOCK : pointDepositTitle -->
+            <div class="head">
+                <div class="wd_icon"></div>
+                <div class="page_title">充值专区</div>
+            </div>
+            <div class="page_title_black_line"></div>
+            <div class="wd_btn_group">
+                <a class="wd_btn1 btn_active" href="pointDeposit-review.html">充值专区</a>
+                <a class="wd_btn2" href="pointRecive-review.html">提领专区</a>
+                <a class="wd_btn9" href="pointc2c-review.html">会员互转</a>
+                <a class="wd_btn3" href="pointDetails-review.html">交易记录</a>
+            </div>
+						<!-- END BLOCK : pointDepositTitle -->
+						
+						<!-- START BLOCK : pointDepositQRCodeStep -->
+						<div id="payQRCodeStep1">
+						<div class="pay_content">
+							<div class="step_title">【步骤一】<br>请向「{faccount}」{fname}，帐户转帐，于{saveBy}传帐完成后，请按下方「已转帐完成」进行下一步。</div>
+							<div class="onlinebank_block">
+								<div class="onlinebank_small_block">
+									<div class="pay_left_block">
+									<div class="pay_title">【支付扫码】</div>
+									<div>
+									<!-- START BLOCK : DepositQRCode -->
+									<img src="./serviceQRCode/{imgQRCode}">
+									<!-- END BLOCK : DepositQRCode -->
+									</div>
+									<div><button class="confirm_trade" id="complete" onclick="payQRCodeStep1to2()">下一步</button></div>
+									<input type="hidden" id="ptype" name="ptype" value="{ptype}">
+								</div>
+								</div>
+								<div class="onlinebank_small_block">
+									<div class="onlinebank_notice">
+										<div class="notice_title_table">
+											<div class="notice_title_row">
+												<div class="notice_title_cell cell_28 ">
+													<div class="dotted_line"></div>
+												</div>
+												<div class="notice_title_cell cell_29">
+													<div class="wd_notice_group">
+														<div class="notice_icon"></div>
+														<div class="wd_notice_text">注意事项</div>
+														<div class="notice_icon"></div>
+													</div>
+												</div>
+												<div class="notice_title_cell cell_28">
+													<div class="dotted_line"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="onlinebank_notice">
+										<ul>
+											<li>请严格依照输入金额打款至指定帐户，如造成充值掉单或入款至已过期帐号，本公司恕不负责。</li>
+											<li>最低存款金额为１００RMB。</li>
+										</ul>
+										<div class="notice_text">P.S.如利用本平台进行任何洗钱诈骗行为，本公司将保有权力终止会员服务及冻结其帐号。</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div id="payQRCodeStep2" style="display:none">
+						<div class="onlinebank_content">
+							<div class="step_title">【步骤二】输入支付资料</div>
+							<div class="onlinebank_block">
+								<div class="onlinebank_small_block">
+									<div class="onlinebank_table">
+										<div class="onlinebank_row">
+											<div class="onlinebank_cell cell_30">支付帐号：</div>
+											<div class="onlinebank_cell"><input type="text" id="payAccount" name="payAccount"></div>
+										</div>
+										<div class="onlinebank_row">
+											<div class="onlinebank_cell cell_30">输入金额：</div>
+											<div class="onlinebank_cell"><input type="text" id="amount" name="amount"></div>
+										</div>
+									</div>
+									<div class="weixin_btn_block"><button class="confirm_trade" onclick="payQRCodeDepositStep2toSubmit()">充值完成-送出申请</button></div>
+								</div>
+								<div class="onlinebank_small_block">
+									<div class="onlinebank_notice">
+										<div class="notice_title_table">
+											<div class="notice_title_row">
+												<div class="notice_title_cell cell_28 ">
+													<div class="dotted_line"></div>
+												</div>
+												<div class="notice_title_cell cell_29">
+													<div class="wd_notice_group">
+														<div class="notice_icon"></div>
+														<div class="wd_notice_text">注意事项</div>
+														<div class="notice_icon"></div>
+													</div>
+												</div>
+												<div class="notice_title_cell cell_28">
+													<div class="dotted_line"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="onlinebank_notice">
+										<ul>
+											<li>请严格依照输入金额打款至指定帐户，如造成充值掉单或入款至已过期帐号，本公司恕不负责。</li>
+											<!--<li>请试用下拉方式选择你要存款的银行。</li>-->
+											<li>最低存款金额为１００RMB。</li>
+										</ul>
+										<div class="notice_text">P.S.如利用本平台进行任何洗钱诈骗行为，本公司将保有权力终止会员服务及冻结其帐号。</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- END BLOCK : pointDepositQRCodeStep -->
 				</div>
 			</div>
 
 			
 		</div>
 	</div>
-
 
 	<div id="more">
 			<div class="more_block">

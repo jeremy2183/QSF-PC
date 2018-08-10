@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
 	<meta name="viewport" content="width=1280">
-	<title>history</title>
+	<title>个人讯息</title>
 	<link rel="stylesheet" href="../css/reset.css">
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/font-awesome.min.css">
@@ -62,49 +62,59 @@
 							</a>
 						</li>
 						<li id="market_list">
-							<a href="targetList-review.html">
+							<a href="targetList-review.html"> 
 								<div class="side_nav_icon1"></div>
 								市场列表
 							</a>
 						</li>
 						<li id="trade_detail">
-							<div class="side_nav_icon2"></div>
-							交易明細
+							<a href="orders-review.html">
+								<div class="side_nav_icon2"></div>
+								交易明細
+							</a>
 						</li>
 						<li id="history">
-							<div class="side_nav_icon3"></div>
-							历史帐务
+							<a href="history-review.html">
+								<div class="side_nav_icon3"></div>
+								历史帐务
+							</a>
 						</li>
 						<li id="game_result">
-							<div class="side_nav_icon4"></div>
-							赛事结果
+							<a href="result-review.html">
+								<div class="side_nav_icon4"></div>
+								赛事结果
+							</a>
 						</li>
 						<li id="live_score">
-							<div class="side_nav_icon6"></div>
-							即时比分
+								<div class="side_nav_icon6"></div>
+								即时比分
 						</li>
 						<li id="announce">
-							<div class="side_nav_icon5"></div>
-							官方公告
+							<a href="notice-review.html">
+								<div class="side_nav_icon5"></div>
+								官方公告
+							</a>
 						</li>
 					</ul>
 				</div>
 				<div class="black_line"></div>
 				<ul>
 					<li class="member_text" id="my">
-						<div class="member_icon"></div>
-						会员中心
+						<a href="userCenter-review.html">
+							<div class="member_icon"></div>
+							会员中心
+						</a>
 					</li>
 				</ul>
 
-				<button class="nav_wd_btn">充值/提领</button>
+				<button class="nav_wd_btn"><a href="pointDeposit-review.html">充值/提领</a></button>
 				<button class="log_out">登出</button>
 				<div class="black_line"></div>
 
 				<div class="online_24">【 24H線上客服 】</div>
 				<div>
 					<div class="group">
-						<div class="service_online"></div>
+						<div class="service_online" onclick="window.open('https://v88.live800.com/live800/chatClient/chatbox.jsp?companyID=698946&amp;configID=1586&amp;jid=5625358570&amp;s=1')"></div>
 						<div>线上客服</div>
 					</div>
 					<div class="group">
@@ -126,14 +136,45 @@
 			
 			<div class="main_content">
 		    <div class="content">
-		    	  
+		    	  <div class="head">
+                <div class="announce_icon"></div>
+                <div class="page_title">网站公告</div>
+            </div>
+            <div class="page_title_black_line"></div>
+						<!-- START BLOCK : c2GetNoticeInfoTitleBlock -->             
+						<div class="announce_btn_group">
+							<form>
+								<button class="announce_btn1" id="type" name="type" value="3"><a href="notice-review_1.html">个人讯息<br><span>会员个人讯息通知</span></a></button>
+								<button class="announce_btn2" id="type" name="type" value="2"><a href="notice-review.html">网站公告<br><span>官方网站各项讯息公告</span></a></button>
+							</form>
+						</div>
+						<!-- END BLOCK : c2GetNoticeInfoTitleBlock -->
+  
+		        <div class="announce_wrap">
+		            <table class="announce_head">
+		                <tr>
+		                    <td class="cell_20">公告日期</td>
+		                    <td class="cell_21">主题</td>
+		                </tr>
+		            </table>
+		            <div class="panel-group" id="accordion">
+		                <div class="panel panel-default">
+		                    <div class="panel-heading">
+		                        <h4 class="panel-title">
+		                            <a data-toggle="collapse" data-parent="#accordion" href="#collapsel">
+		                                <div class="message_table" style="padding:50px;text-align:center;">                                 
+		                                    <div class="message_row">暂无您的讯息</div>
+		                                </div>
+		                            </a>
+		                        </h4>
+		                    </div>
+		                </div>
+		            </div>
+        		</div>    
 				</div>
 			</div>
-
-			
 		</div>
 	</div>
-
 
 	<div id="more">
 			<div class="more_block">

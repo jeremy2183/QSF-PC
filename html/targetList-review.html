@@ -24,7 +24,7 @@
 	</script>
 </head>
 <body>
-<div class="top_nav nav navbar-fixed-top">
+    <div class="top_nav nav navbar-fixed-top">
 		<div class="date" id="sysDateTime">
 		</div>
 		<div class="black_dash"></div>
@@ -113,7 +113,7 @@
 				<div class="online_24">【 24H線上客服 】</div>
 				<div>
 					<div class="group">
-						<div class="service_online"></div>
+						<div class="service_online" onclick="window.open('https://v88.live800.com/live800/chatClient/chatbox.jsp?companyID=698946&amp;configID=1586&amp;jid=5625358570&amp;s=1')"></div>
 						<div>线上客服</div>
 					</div>
 					<div class="group">
@@ -134,622 +134,621 @@
 			</div>
 
 		<div class="main_content market_sidebar">
-      <div class="content_block_table">
-        <div class="content_block_row">
-        	 <!-- 列表下拉選單 -->
-        	 <div class="content_block_left">
-						<div class="content_block_left_wrap">
-						<!-- START BLOCK : gameMainItem -->
-							<div class="v1{switchTag}">
-								<div class="market_btn_space">
-									<div class="market_btn_wrap ">
-										<div class="market_btn">
-											<!--<div class="tab_block"></div>-->
-											<div class="market_btn_icon01"></div>
-											<div class="game_list_tab">2018-08-09<br></div>
-											<div class="market_btn_arrow"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- START BLOCK : gameList -->
-							<div class="market_game_list" style="display:{switchStatus}">
-								<!-- START BLOCK : gameListItem -->
-								<div class="market_game {marketGameActive}" onclick="marketTab( '{gameid}', '{ga12}', '{gametime}', '{competitionname}', '{gamename}' )">
-									<div class="game_wrap">
-										<div class="game_name_wrap">
-											<div class="game_category">【{competitionname}】{dateStr} &rarr; <span>{timeStr}</span></div>
-											<div class="game_name">{gamename}</div>
-											<div class="game_score"></div>
-										</div>
-									</div>
-								</div>
-								<!-- END BLOCK : gameListItem -->
-							</div>
-							<!-- END BLOCK : gameList -->
-						<!-- END BLOCK : gameMainItem -->
+            <div class="content_block_table">
+                <div class="content_block_row">
+        	            <!-- 列表下拉選單 -->
+            	        <div class="content_block_left">
+    						<div class="content_block_left_wrap">
+    						<!-- START BLOCK : gameMainItem -->
+    							<div class="v1{switchTag}">
+    								<div class="market_btn_space">
+    									<div class="market_btn_wrap ">
+    										<div class="market_btn">
+    											<!--<div class="tab_block"></div>-->
+    											<div class="market_btn_icon01"></div>
+    											<div class="game_list_tab">2018-08-09<br></div>
+    											<div class="market_btn_arrow"></div>
+    										</div>
+    									</div>
+    								</div>
+    							</div>
+    							<!-- START BLOCK : gameList -->
+    							<div class="market_game_list" style="display:{switchStatus}">
+    								<!-- START BLOCK : gameListItem -->
+    								<div class="market_game {marketGameActive}" onclick="marketTab( '{gameid}', '{ga12}', '{gametime}', '{competitionname}', '{gamename}' )">
+    									<div class="game_wrap">
+    										<div class="game_name_wrap">
+    											<div class="game_category">【{competitionname}】{dateStr} &rarr; <span>{timeStr}</span></div>
+    											<div class="game_name">{gamename}</div>
+    											<div class="game_score"></div>
+    										</div>
+    									</div>
+    								</div>
+    								<!-- END BLOCK : gameListItem -->
+    							</div>
+    							<!-- END BLOCK : gameList -->
+    						<!-- END BLOCK : gameMainItem -->
 
-							<div class="v1{switchTag}">
-								<div class="market_btn_space">
-									<div class="market_btn_wrap ">
-										<div class="market_btn">
-											<!--<div class="tab_block"></div>-->
-											<div class="market_btn_icon02"></div>
-											<div class="game_list_tab">全部賽事<br></div>
-											<div class="market_btn_arrow"></div>
-										</div>
-									</div>
-								</div>
-							</div>
+    							<div class="v1{switchTag}">
+    								<div class="market_btn_space">
+    									<div class="market_btn_wrap ">
+    										<div class="market_btn">
+    											<!--<div class="tab_block"></div>-->
+    											<div class="market_btn_icon02"></div>
+    											<div class="game_list_tab">全部賽事<br></div>
+    											<div class="market_btn_arrow"></div>
+    										</div>
+    									</div>
+    								</div>
+    							</div>
 
-						<a><div class="market_btn_wrap">
-							<div class="market_btn" onclick="cpMenu()">
-								<div class="market_btn_icon04"></div>
-								<div class="game_list_tab">选择联盟<br></div>
-								<div class="market_btn_arrow"></div>
-							</div></div>
-						</a>
-						</div>
-					</div>
+        						<a><div class="market_btn_wrap">
+        							<div class="market_btn" onclick="cpMenu()">
+        								<div class="market_btn_icon04"></div>
+        								<div class="game_list_tab">选择联盟<br></div>
+        								<div class="market_btn_arrow"></div>
+        							</div></div>
+        						</a>
+    					    </div>
+    					</div>
 
-					<!-- 市場列表 -->
-					<div class="content_block_right">
-                <div class="head">
-                    <div class="market_list_icon"></div>
-                    <div class="page_title">市场列表</div>
-                    <div class="market_list_btn">
-                    <input type="hidden" id="gametime" name="gametime" value='2017-10-06 20:00:00'>
-                    <input type="hidden" id="gamename" name="gamename" value='俄罗斯U21 v 奥地利U21'>
-                        <button class="game_record" id="game_record" onclick="pk()">对战纪录</button>
-                        <div class="update">更新<span>35</span></div>
-                    </div>
-                </div>
-                <div class="page_title_black_line"></div>
-                <div class="market_whole_table">
-                    <div class="market_whole_row">
-                        <div class="market_whole_cell table_left">
-                            <table class="market_table_head">
-                                <tr>
-                                    <td class="cell_39">
-                                        <div class="head_icon1-1"></div>
-                                    </td>
-                                    <td class="head_title cell_40">波胆</td>
-                                    <td class="cell_41 head_amount">成交量：95923.65</td>
-                                    <td class="cell_42">
-                                        <div class="head_icon2"></div>
-                                    </td>
-                                </tr>
-                            </table>
-                            <table class="market_table_content">
-                                <tr class="content_title">
-                                    <td class="cell_43">《选项》</td>
-                                    <td class="cell_44">《获利％》</td>
-                                    <td class="cell_45">《可交易量》</td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">0-1</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">0-2</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">0-3</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">1-0</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">1-1</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">1-2</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">1-3</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">2-0</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">2-1</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">2-2</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">2-3</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">3-0</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">3-1</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">3-2</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">3-3</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">客队赢进四球以上</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
+        					<!-- 市場列表 -->
+        				<div class="content_block_right">
+                            <div class="head">
+                                <div class="market_list_icon"></div>
+                                <div class="page_title">市场列表</div>
+                                <div class="market_list_btn">
+                                    <input type="hidden" id="gametime" name="gametime" value='2017-10-06 20:00:00'>
+                                    <input type="hidden" id="gamename" name="gamename" value='俄罗斯U21 v 奥地利U21'>
+                                        <button class="game_record" id="game_record" onclick="pk()">对战纪录</button>
+                                        <div class="update">更新<span>35</span></div>
+                                </div>
+                            </div>
+                            <div class="page_title_black_line"></div>
+                            <div class="market_whole_table">
+                                <div class="market_whole_row">
+                                    <div class="market_whole_cell table_left">
+                                        <table class="market_table_head">
+                                            <tr>
+                                                <td class="cell_39">
+                                                    <div class="head_icon1-1"></div>
+                                                </td>
+                                                <td class="head_title cell_40">波胆</td>
+                                                <td class="cell_41 head_amount">成交量：95923.65</td>
+                                                <td class="cell_42">
+                                                    <div class="head_icon2"></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table class="market_table_content">
+                                            <tr class="content_title">
+                                                <td class="cell_43">《选项》</td>
+                                                <td class="cell_44">《获利％》</td>
+                                                <td class="cell_45">《可交易量》</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">0-1</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">0-2</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">0-3</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">1-0</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">1-1</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">1-2</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">1-3</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">2-0</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">2-1</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">2-2</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">2-3</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">3-0</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">3-1</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">3-2</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">3-3</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">客队赢进四球以上</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
 
-                                <tr class="content_last">
-                                    <td class="cell_43">主队赢进四球以上</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
+                                            <tr class="content_last">
+                                                <td class="cell_43">主队赢进四球以上</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="market_whole_cell table_right">
+                                        <table class="market_table_head">
+                                            <tr>
+                                                <td class="cell_46">
+                                                    <div class="head_icon1-2"></div>
+                                                </td>
+                                                <td class="head_title cell_40">上半场波胆</td>
+                                                <td class="cell_41 head_amount">成交量：95923.65</td>
+                                                <td class="cell_42">
+                                                    <div class="head_icon2"></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table class="market_table_content">
+                                            <tr class="content_title">
+                                                <td class="cell_43">《选项》</td>
+                                                <td class="cell_44">《获利％》</td>
+                                                <td class="cell_45">《可交易量》</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">0-1</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">0-2</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">0-3</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">1-0</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">1-1</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">1-2</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">1-3</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">2-0</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">2-1</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">2-2</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">2-3</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">3-0</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">3-1</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">3-2</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">3-3</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">客队赢进四球以上</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="content_last">
+                                                <td class="cell_43">主队赢进四球以上</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="market_whole_row">
+                                    <div class="market_whole_cell table_left">
+                                        <table class="market_table_head">
+                                            <tr>
+                                                <td class="cell_47">
+                                                    <div class="head_icon1-3"></div>
+                                                </td>
+                                                <td class="head_title cell_40">总得分</td>
+                                                <td class="cell_41 head_amount">成交量：95923.65</td>
+                                                <td class="cell_42">
+                                                    <div class="head_icon2"></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table class="market_table_content">
+                                            <tr class="content_title">
+                                                <td class="cell_43">《选项》</td>
+                                                <td class="cell_44">《获利％》</td>
+                                                <td class="cell_45">《可交易量》</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">0-1</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">0-2</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">0-3</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">1-0</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">1-1</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">1-2</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="content_last">
+                                                <td class="cell_43">主队赢进四球以上</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="market_whole_cell table_right">
+                                        <table class="market_table_head">
+                                            <tr>
+                                                <td class="cell_48">
+                                                    <div class="head_icon1-4"></div>
+                                                </td>
+                                                <td class="head_title cell_40">首入球时间</td>
+                                                <td class="cell_41 head_amount">成交量：95923.65</td>
+                                                <td class="cell_42">
+                                                    <div class="head_icon2"></div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table class="market_table_content">
+                                            <tr class="content_title">
+                                                <td class="cell_43">《选项》</td>
+                                                <td class="cell_44">《获利％》</td>
+                                                <td class="cell_45">《可交易量》</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">0-1</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">0-2</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">0-3</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">1-0</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">1-1</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">1-2</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">1-3</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cell_43">2-0</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="content_last">
+                                                <td class="cell_43">主队赢进四球以上</td>
+                                                <td class="cell_44">5.00%</td>
+                                                <td class="cell_45">&yen;290,124.84
+                                                    <div class="btn_order">
+                                                        <button>下单</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="market_whole_cell table_right">
-                            <table class="market_table_head">
-                                <tr>
-                                    <td class="cell_46">
-                                        <div class="head_icon1-2"></div>
-                                    </td>
-                                    <td class="head_title cell_40">上半场波胆</td>
-                                    <td class="cell_41 head_amount">成交量：95923.65</td>
-                                    <td class="cell_42">
-                                        <div class="head_icon2"></div>
-                                    </td>
-                                </tr>
-                            </table>
-                            <table class="market_table_content">
-                                <tr class="content_title">
-                                    <td class="cell_43">《选项》</td>
-                                    <td class="cell_44">《获利％》</td>
-                                    <td class="cell_45">《可交易量》</td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">0-1</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">0-2</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">0-3</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">1-0</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">1-1</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">1-2</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">1-3</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">2-0</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">2-1</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">2-2</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">2-3</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">3-0</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">3-1</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">3-2</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">3-3</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">客队赢进四球以上</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-
-                                <tr class="content_last">
-                                    <td class="cell_43">主队赢进四球以上</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="market_whole_row">
-                        <div class="market_whole_cell table_left">
-                            <table class="market_table_head">
-                                <tr>
-                                    <td class="cell_47">
-                                        <div class="head_icon1-3"></div>
-                                    </td>
-                                    <td class="head_title cell_40">总得分</td>
-                                    <td class="cell_41 head_amount">成交量：95923.65</td>
-                                    <td class="cell_42">
-                                        <div class="head_icon2"></div>
-                                    </td>
-                                </tr>
-                            </table>
-                            <table class="market_table_content">
-                                <tr class="content_title">
-                                    <td class="cell_43">《选项》</td>
-                                    <td class="cell_44">《获利％》</td>
-                                    <td class="cell_45">《可交易量》</td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">0-1</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">0-2</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">0-3</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">1-0</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">1-1</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">1-2</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="content_last">
-                                    <td class="cell_43">主队赢进四球以上</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="market_whole_cell table_right">
-                            <table class="market_table_head">
-                                <tr>
-                                    <td class="cell_48">
-                                        <div class="head_icon1-4"></div>
-                                    </td>
-                                    <td class="head_title cell_40">首入球时间</td>
-                                    <td class="cell_41 head_amount">成交量：95923.65</td>
-                                    <td class="cell_42">
-                                        <div class="head_icon2"></div>
-                                    </td>
-                                </tr>
-                            </table>
-                            <table class="market_table_content">
-                                <tr class="content_title">
-                                    <td class="cell_43">《选项》</td>
-                                    <td class="cell_44">《获利％》</td>
-                                    <td class="cell_45">《可交易量》</td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">0-1</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">0-2</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">0-3</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">1-0</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">1-1</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">1-2</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">1-3</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="cell_43">2-0</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-
-                                <tr class="content_last">
-                                    <td class="cell_43">主队赢进四球以上</td>
-                                    <td class="cell_44">5.00%</td>
-                                    <td class="cell_45">&yen;290,124.84
-                                        <div class="btn_order">
-                                            <button>下单</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
 
 				</div>
 			</div>
@@ -1040,6 +1039,236 @@
 
 		</div>
 	</div>
+
+    <div id="more">
+            <div class="more_block">
+                <div class="more_row">
+                    <div class="more_cell">
+                        <div class="group">
+                            <div class="help_center" onclick="javascript:location.href='helpcenter.php'"></div>
+                            <div>帮助中心</div>
+                        </div>
+                    </div>
+                    <div class="more_cell">
+                        <div class="group">
+                            <div class="cooperate" onclick="javascript:location.href='tgContact.php'"></div>
+                            <div>与我们合作</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="more_row">
+                    <div class="more_cell">
+                        <div class="group">
+                            <div class="game_result" onclick="javascript:location.href='statistics.php'"></div>
+                            <div>历年赛事结果</div>
+                        </div>
+                    </div>
+                    <div class="more_cell">
+                        <div class="group">
+                            <div class="rules" onclick="javascript:location.href='rule.php'"></div>
+                            <div>规则说明</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="more_row">
+                    <div class="more_cell">
+                        <div class="group">
+                            <div class="discuss"  onclick="window.open('http://f.tg333.net/')"></div>
+                            <div>讨论区</div>
+                        </div>
+                    </div>
+                    <div class="more_cell">
+                        <div class="group">
+                            <div class="relate_web" onclick="javascript:location.href='relate.php'"></div>
+                            <div>相关网站</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="more_row">
+                    <div class="more_cell">
+                        <div class="group">
+                            <div class="about_us"  onclick="javascript:location.href='about.php'"></div>
+                            <div>关于淘金网</div>
+                        </div>
+                    </div>
+                    <div class="more_cell">
+                        <div class="group">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+
+    <!--<div id="Modal_times" class="cover">
+        <div class="modal_times">
+            <div class="modal_head">交易成功
+                <div class="close_icon"></div>
+            </div>
+        <div class="submit_bg">
+            <div class="submit_text">提醒您，截至目前为止</div>
+            <div class="submit_text"><span>免手续费</span>优惠</div>
+            <div id="feecircle" class="countdown2"></div>
+            <div class="submit_text blue_bg">每周(一)凌晨00：00重新计算</div>
+            <div class="submit_btn_group">
+                <button class="submit_confirm2" id="confirm_next" onclick="javascript:location.href='./pointDetails.php'">确定</button>
+            </div>
+        </div>
+        </div>
+    </div>-->
+
+    <div id="Modal_times" class="cover_order"><!--free fee-->
+      <div class="modal_times">
+          <div class="modal_times_mark_wrap"><div class="modal_times_mark"></div></div>
+          <div class="modal_times_head">交易次数提醒
+              <div class="close_icon" onclick="javascript:location.href='./pointDetails.php'"></div>
+          </div>
+          <div class="modal_times_text">
+              <div class="text_line1">提醒您！截至目前为止</div>
+              <div class="text_line2">免手续费优惠</div>
+          </div>
+          <div id="countdown"></div>
+           <div class="daily_reset_wrap"><div class="daily_reset">每周(一)凌晨00：00重新计算</div></div>
+           <div class="modal_times_btn_wrap"><button class="modal_times_confirm" onclick="javascript:location.href='./pointDetails.php'">确&nbsp;定</button></div>
+      </div>
+    </div>
+
+    <div id="Modal_times_none" class="cover_order"><!--0.05 fee-->
+        <div class="modal_times_none">
+            <div class="modal_times_mark_wrap"><div class="modal_times_mark"></div></div>
+            <div class="modal_times_head">交易次数提醒
+                <div class="close_icon" onclick="javascript:location.href='./pointDetails.php'"></div>
+            </div>
+            <div class="modal_times_text">
+                <div class="text_line1">提醒您！截至目前为止</div>
+                <div class="text_line2">免手续费优惠</div>
+            </div>
+            <div id="countdown_money"></div>
+            <div class="modal_times_text">
+                <div class="text_line3">若继续交易将收取<span>５％</span>行政费用点数<br>
+                        <span id='feecount'></span><br>
+                       于您申请的<span>提领金额内扣除</span>。</div>
+            </div>
+
+            <div class="daily_reset_wrap"><div class="daily_reset">每周(一)凌晨00：00重新计算</div></div>
+            <div class="modal_times_btn_wrap">
+                <button id=payfee class="modal_times_confirm2" onclick="feemoneytips()">确&nbsp;定</button>
+                <button class="modal_times_cancel">取&nbsp;消</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!--這段是客服訊息-->
+    <div id="Modal_service" class="cover_order">
+        <div class="modal_service">
+            <div class="modal_head_pmode">
+                <div id='service'>
+                    淘金网客服【QQ扫一扫】    
+                </div>
+              <div class="close_icon"></div>
+            </div>
+            <div id="QRcode" style="text-align:center;">
+                <img src="serviceQRCode/QQ.1099097563.jpeg" class="QQ_qrcode">
+            </div>
+           
+        </div>
+    </div>
+    <!--這段是客服訊息 結束-->
+
+    <!-- 提示訊息 開始-->
+    <div id="msgx" class="cover">
+        <div class="modal_success_wd">
+            <div class="modal_head"><span id="title"></span>
+                <div id="popupClose" class="close_icon" onclick="msgx()"></div>
+            </div>
+            <div class="success_wrap">
+                <div id="icon" class="success_icon"></div>
+                <div id="fontstyle" class="success_text"><div id="text1"></div><span id="text2" class="success_text2"></span></div>
+            </div>
+        </div>
+    </div>
+    <!-- 提示訊息 結束-->
+
+    <!-- c2c 交易成功开始 -->
+    <div id="Modal_order03" class="cover_order03">
+        <div class="modal_order03">
+            <div class="success_icon_wrap"><div class="success_icon"></div></div>
+            <div class="modal_head_order03">会员互转-交易完成</div>
+            <div class="order03_warp">
+                <div class="order03_table">
+                    <div class="order03_row">
+                        <div class="order03_cell cell_49"><div class="title_bg">交易单号</div></div>
+                        <div class="order03_cell cell_50">
+                            <div class="order03_text" id="res_orderNum"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order03_table">
+                    <div class="order03_row">
+                        <div class="order03_cell cell_49">
+                            <div class="title_bg">交易時间</div>
+                        </div>
+                        <div class="order03_cell cell_50">
+                            <div class="order03_text" id="res_orderTime"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order03_table">
+                    <div class="order03_row">
+                        <div class="order03_cell cell_49">
+                            <div class="title_bg">转出帐号</div>
+                        </div>
+                        <div class="order03_cell cell_50">
+                            <div class="order03_text" id="payuser"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order03_table">
+                    <div class="order03_row">
+                        <div class="order03_cell cell_49">
+                            <div class="title_bg">转入帐号</div>
+                        </div>
+                        <div class="order03_cell cell_50">
+                            <div class="order03_text" id="incomeuser"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order03_table">
+                    <div class="order03_row">
+                        <div class="order03_cell cell_49">
+                            <div class="title_bg">转入金额</div>
+                        </div>
+                        <div class="order03_cell cell_50">
+                            <div class="order03_text" id="incomeamount"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order03_table">
+                    <button class="onlinebank_c2c" onclick="javascript:location.href='pointDetails.php'">前往交易记录</button>
+                </div>
+           </div>
+        </div>
+    </div>
+    <!-- c2c 交易成功 结束-->
+
+
+    <div id="Loading" style="display:none">
+    <div class="cover_loading"></div>
+        <div id="loader">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>    
+
 
 	<div class="footer">
 		<div class="footer_container">
