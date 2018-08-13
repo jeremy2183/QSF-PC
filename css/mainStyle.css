@@ -3310,6 +3310,7 @@ td div {
 	padding: 20px 30px;
 	font-size: 18px;
 	margin: 30px 0px;
+	text-align: center;
 	-webkit-box-shadow: 2px 2px 3px 3px rgba(135, 148, 148, 0.3), -2px -2px 3px 3px rgba(135, 148, 148, 0.3);
 	box-shadow: 2px 2px 3px 3px rgba(135, 148, 148, 0.3), -2px -2px 3px 3px rgba(135, 148, 148, 0.3);
 }
