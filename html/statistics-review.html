@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1280">
+	<title>TG淘金网</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/mainStyle.css">
+	<link rel="stylesheet" href="../css/races_news.css">
+	<script type="text/javascript" src="../js/tgjs.js"></script>
+</head>
+<script>
+		var now = new Date();
+		var year = now.getFullYear();
+		var month = now.getMonth();
+		var d = now.getDate();
+		var h = now.getHours();
+		var m = now.getMinutes();
+		var s = now.getSeconds();
+
+		var TodayStr = year + "-" + month +"-"+ d +" "+ h +":" + m +":"+ s ;
+	</script>
+
+<body class="login_body">
+	<div class="login_content_wrap">
+		<div class="login_top">
+			<div class="login_logo" onclick="javascript:location.href='./'"></div>
+			<div class="date" id="sysDateTime"></div>
+		</div>
+		<div class="number_line">
+			<div class="lang_select_wrap">
+				<div class="select_lang">
+					<div id="sample" class="dropdown">
+						<dt><a href="#"><span><img class="flag" src="../img/China-flag.png" alt=""/>简体中文</span></a></dt>
+						<dd>
+							<ul>
+								<li><a href="#"><img class="flag" src="../img/China-flag.png" alt="" />简体中文<span class="value">BR</span></a></li>
+								<li><a href="#"><img class="flag" src="../img/Hong-kong-flag.png" alt="" />繁體中文<span class="value">FR</span></a></li>
+								<li><a href="#"><img class="flag" src="../img/United-kingdom-flag.png" alt="" />English<span class="value">DE</span></a></li>
+							</ul>
+						</dd>
+					</div>
+				</div>
+			</div>
+			<div class="number_line_wrap">
+				<div class="number_wrap">
+					<div class="number_icon"></div>
+					<div>{onlineNum}</div>
+				</div>
+			</div>
+		</div>
+		<div class="login_navbar_wrap">
+			<!-- START BLOCK : menuInfoBar_notLogin -->
+			<div id="notlogin" class="login_navbar">
+				<div class="right_wrap">
+					<div class="account_wrap">
+						<div class="account_icon"></div>
+						<div><input type="text" placeholder="帐号" id="account" name="account"></div>
+					</div>
+					<div class="pwd_wrap">
+						<div class="lock_icon"></div>
+						<div><input type="password" placeholder="密码" id="pwd" name="pwd"></div>
+					</div>
+					<div class="login_btn_wrap">
+						<input type="hidden" name="login" id="login" value="{login}">
+						<button class="login_btn" id="login" onclick="ckLogin()">登入</button>
+						<button class="forgetPwd_btn" id="forgetPwd_btn" onclick="window.open('https://v88.live800.com/live800/chatClient/chatbox.jsp?companyID=698946&configID=1586&jid=5625358570&s=1')">忘记密码</button>
+						<button class="register_btn" onclick="intoRegister('')">注册</button>
+					</div>
+				</div>
+			</div>
+			<!-- END BLOCK : menuInfoBar_notLogin -->
+
+			<!-- START BLOCK : menuInfoBar_Login -->
+			<!-- <div id="login" class="login_navbar">
+				<div>
+					<ul>
+						<li><a href="targetList.php">市场列表</a></li>
+						<li><a href="orders.php">交易明细</a></li>
+						<li><a href="history.php">历史帐务</a></li>
+						<li><a href="result.php">赛事结果</a></li>
+						<li><a href="notice.php">公&nbsp;&nbsp;&nbsp;告</a></li>
+					</ul>
+				</div>
+				<div class="right_wrap">
+					<div class="account_wrap">
+						<div class="account_icon"></div>
+						<div><input type="text" value="{username}" readonly></div>
+					</div>
+					<div class="money_wrap">
+						<div class="acc_icon"></div>
+						<div><input type="text" value="{quotaView}" readonly></div>
+					</div>
+					<div class="login_btn_wrap">
+						<a href="userCenter.php"><button class="member_btn">我&nbsp;&nbsp;&nbsp;&nbsp;的</button></a>
+						<a href="logout.php"><button class="logout_btn">登出</button></a>
+					</div>
+				</div>
+			</div> -->
+			<!-- END BLOCK : menuInfoBar_Login -->
+		</div>
+
+
+		<div class="marquee_wrap">
+			<div class="marquee_icon"></div>
+			<div class="marquee_content_login">
+				<marquee>{marquee}</marquee>
+			</div>
+		</div>
+		<!-- INCLUDE BLOCK : Content -->
+
+		    <div class="black_line"></div>
+    <div class="title_game_result">历年赛事结果</div>
+    <div id="carousel" class='outerWrapper'>
+    <!-- START BLOCK : scorerBlock -->
+        <div class="scorer_item">
+            <a href="statistics.php?cp={i}">
+            <div class="alli_logo">
+							<img src="interface/v2/img/soccer_01.png">
+            </div>
+            <div class="alli_name">{union}</div>
+            </a>
+        </div>
+        <div class="scorer_item">
+            <a href="statistics.php?cp={i}">
+            <div class="alli_logo">
+							<img src="interface/v2/img/soccer_02.png">
+            </div>
+            <div class="alli_name">{union}</div>
+            </a>
+        </div>
+        <div class="scorer_item">
+            <a href="statistics.php?cp={i}">
+            <div class="alli_logo">
+							<img src="interface/v2/img/soccer_03.png">
+            </div>
+            <div class="alli_name">{union}</div>
+            </a>
+        </div>
+        <div class="scorer_item">
+            <a href="statistics.php?cp={i}">
+            <div class="alli_logo">
+							<img src="interface/v2/img/soccer_04.png">
+            </div>
+            <div class="alli_name">{union}</div>
+            </a>
+        </div>
+        <div class="scorer_item">
+            <a href="statistics.php?cp={i}">
+            <div class="alli_logo">
+							<img src="interface/v2/img/soccer_05.png">
+            </div>
+            <div class="alli_name">{union}</div>
+            </a>
+        </div>
+        <div class="scorer_item">
+            <a href="statistics.php?cp={i}">
+            <div class="alli_logo">
+							<img src="interface/v2/img/soccer_06.png">
+            </div>
+            <div class="alli_name">{union}</div>
+            </a>
+        </div>
+    <!-- END BLOCK : scorerBlock  -->
+    </div>
+    
+    <div class="black_line"></div>
+    <div class="alli_game_name_title">{union_name}</div>
+    <div class="score_total">波胆比分统计</div>
+   
+    <div class="history_game_wrap_table">
+            <div class="history_game_wrap_row">
+            <!-- START BLOCK : xfile0 -->
+                <div class="history_game_wrap_cell table_left">  
+                    <div class="history_game_head">{titleName}</div>
+                        <table class="history_game_table">
+                            <tr class="history_game_row">
+                                <td class="history_game_cell">排名</td>
+                                <td class="history_game_cell">赛果</td>
+                                <td class="history_game_cell">次数</td>
+                                <td class="history_game_cell">百分比</td>
+                            </tr>
+                            <!-- START BLOCK : score0 -->
+                            <tr class="history_game_row">
+                                <td class="history_game_cell">{0}</td>
+                                <td class="history_game_cell">{1}</td>
+                                <td class="history_game_cell">{2}</td>
+                                <td class="history_game_cell">{3}</td>
+                            </tr>
+                            <!-- END BLOCK : score0 -->
+                        </table>
+                </div>
+                <!-- END BLOCK : xfile0 -->
+                <!-- START BLOCK : xfile1 -->
+                <div class="history_game_wrap_cell table_right">
+                    <div class="history_game_head02">{titleName}</div>
+                    <table class="history_game_table">
+                        <tr class="history_game_row">
+                            <td class="history_game_cell">排名</td>
+                            <td class="history_game_cell">赛果</td>
+                            <td class="history_game_cell">次数</td>
+                            <td class="history_game_cell">百分比</td>
+                        </tr>
+                         <!-- START BLOCK : score1 -->
+                        <tr class="history_game_row">
+                            <td class="history_game_cell">{0}</td>
+                            <td class="history_game_cell">{1}</td>
+                            <td class="history_game_cell">{2}</td>
+                            <td class="history_game_cell">{3}</td>
+                        </tr>
+                        <!-- END BLOCK : score1 -->
+                    </table>
+                </div>
+           </div>
+            <!-- END BLOCK : xfile1 -->
+            <!-- START BLOCK : xfile2 -->
+            <div class="history_game_wrap_row">
+                <div class="history_game_wrap_cell table_left">
+                    <div class="history_game_head03">{titleName}</div>
+                    <table class="history_game_table">
+                        <tr class="history_game_row">
+                            <td class="history_game_cell">排名</td>
+                            <td class="history_game_cell">赛果</td>
+                            <td class="history_game_cell">次数</td>
+                            <td class="history_game_cell">百分比</td>
+                        </tr>
+                        <!-- START BLOCK : score2 -->
+                        <tr class="history_game_row">
+                            <td class="history_game_cell">{0}</td>
+                            <td class="history_game_cell">{1}</td>
+                            <td class="history_game_cell">{2}</td>
+                            <td class="history_game_cell">{3}</td>
+                        </tr>
+                        <!-- END BLOCK : score2 -->
+                    </table>
+                </div>
+                <!-- END BLOCK : xfile2 -->
+
+                <!-- START BLOCK : xfile3 -->
+                <div class="history_game_wrap_cell table_right">
+                    <div class="history_game_head04">{titleName}</div>
+                    <table class="history_game_table">
+                        <tr class="history_game_row">
+                            <td class="history_game_cell">排名</td>
+                            <td class="history_game_cell">赛果</td>
+                            <td class="history_game_cell">次数</td>
+                            <td class="history_game_cell">百分比</td>
+                        </tr>
+                         <!-- START BLOCK : score3 -->
+                        <tr class="history_game_row">
+                            <td class="history_game_cell">{0}</td>
+                            <td class="history_game_cell">{1}</td>
+                            <td class="history_game_cell">{2}</td>
+                            <td class="history_game_cell">{3}</td>
+                        </tr>
+                        <!-- END BLOCK : score3 -->
+                    </table>
+                </div>
+                 <!-- END BLOCK : xfile3 -->
+            </div>
+    </div>
+
+
+
+
+
+
+	</div>
+
+	
+
+
+
+	<!--<div id="Modal_times" class="cover">
+	    <div class="modal_times">
+	        <div class="modal_head">交易成功
+	            <div class="close_icon"></div>
+	        </div>
+	    <div class="submit_bg">
+	        <div class="submit_text">提醒您，截至目前为止</div>
+	        <div class="submit_text"><span>免手续费</span>优惠</div>
+	        <div id="feecircle" class="countdown2"></div>
+	        <div class="submit_text blue_bg">每周(一)凌晨00：00重新计算</div>
+	        <div class="submit_btn_group">
+	            <button class="submit_confirm2" id="confirm_next" onclick="javascript:location.href='./pointDetails.php'">确定</button>
+	        </div>
+	    </div>
+	    </div>
+	</div>-->
+
+	<div id="Modal_times" class="cover_order"><!--free fee-->
+	  <div class="modal_times">
+	      <div class="modal_times_mark_wrap"><div class="modal_times_mark"></div></div>
+	      <div class="modal_times_head">交易次数提醒
+	          <div class="close_icon" onclick="javascript:location.href='./pointDetails.php'"></div>
+	      </div>
+	      <div class="modal_times_text">
+	          <div class="text_line1">提醒您！截至目前为止</div>
+	          <div class="text_line2">免手续费优惠</div>
+	      </div>
+	      <div id="countdown"></div>
+	       <div class="daily_reset_wrap"><div class="daily_reset">每周(一)凌晨00：00重新计算</div></div>
+	       <div class="modal_times_btn_wrap"><button class="modal_times_confirm" onclick="javascript:location.href='./pointDetails.php'">确&nbsp;定</button></div>
+	  </div>
+	</div>
+
+	<div id="Modal_times_none" class="cover_order"><!--0.05 fee-->
+	    <div class="modal_times_none">
+	        <div class="modal_times_mark_wrap"><div class="modal_times_mark"></div></div>
+	        <div class="modal_times_head">交易次数提醒
+	            <div class="close_icon" onclick="javascript:location.href='./pointDetails.php'"></div>
+	        </div>
+	        <div class="modal_times_text">
+	            <div class="text_line1">提醒您！截至目前为止</div>
+	            <div class="text_line2">免手续费优惠</div>
+	        </div>
+	        <div id="countdown_money"></div>
+	        <div class="modal_times_text">
+	            <div class="text_line3">若继续交易将收取<span>５％</span>行政费用点数<br>
+	                    <span id='feecount'></span><br>
+	                   于您申请的<span>提领金额内扣除</span>。</div>
+	        </div>
+
+	        <div class="daily_reset_wrap"><div class="daily_reset">每周(一)凌晨00：00重新计算</div></div>
+	        <div class="modal_times_btn_wrap">
+	            <button id=payfee class="modal_times_confirm2" onclick="feemoneytips()">确&nbsp;定</button>
+	            <button class="modal_times_cancel">取&nbsp;消</button>
+	        </div>
+	    </div>
+	</div>
+
+
+	<!--這段是客服訊息-->
+	<div id="Modal_service" class="cover_order">
+	    <div class="modal_service">
+	        <div class="modal_head_pmode"><div id='service'></div>
+	            <div class="close_icon"></div>
+	        </div>
+	        <div id="QRcode" style="text-align:center;"></div>
+	       
+	    </div>
+	</div>
+	<!--這段是客服訊息 結束-->
+
+	<!-- 提示訊息 開始-->
+	<div id="msgx" class="cover">
+	    <div class="modal_success_wd">
+	        <div class="modal_head"><span id="title"></span>
+	            <div id="popupClose" class="close_icon" onclick="msgx()"></div>
+	        </div>
+	        <div class="success_wrap">
+	            <div id="icon" class="success_icon"></div>
+	            <div id="fontstyle" class="success_text"><div id="text1"></div><span id="text2" class="success_text2"></span></div>
+	        </div>
+	    </div>
+	</div>
+	<!-- 提示訊息 結束-->
+
+	<!-- c2c 交易成功开始 -->
+	<div id="Modal_order03" class="cover_order03">
+	    <div class="modal_order03">
+	        <div class="success_icon_wrap"><div class="success_icon"></div></div>
+	        <div class="modal_head_order03">会员互转-交易完成</div>
+	        <div class="order03_warp">
+	            <div class="order03_table">
+	                <div class="order03_row">
+	                    <div class="order03_cell cell_49"><div class="title_bg">交易单号</div></div>
+	                    <div class="order03_cell cell_50">
+	                        <div class="order03_text" id="res_orderNum"></div>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="order03_table">
+	                <div class="order03_row">
+	                    <div class="order03_cell cell_49">
+	                        <div class="title_bg">交易時间</div>
+	                    </div>
+	                    <div class="order03_cell cell_50">
+	                        <div class="order03_text" id="res_orderTime"></div>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="order03_table">
+	                <div class="order03_row">
+	                    <div class="order03_cell cell_49">
+	                        <div class="title_bg">转出帐号</div>
+	                    </div>
+	                    <div class="order03_cell cell_50">
+	                        <div class="order03_text" id="payuser"></div>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="order03_table">
+	                <div class="order03_row">
+	                    <div class="order03_cell cell_49">
+	                        <div class="title_bg">转入帐号</div>
+	                    </div>
+	                    <div class="order03_cell cell_50">
+	                        <div class="order03_text" id="incomeuser"></div>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="order03_table">
+	                <div class="order03_row">
+	                    <div class="order03_cell cell_49">
+	                        <div class="title_bg">转入金额</div>
+	                    </div>
+	                    <div class="order03_cell cell_50">
+	                        <div class="order03_text" id="incomeamount"></div>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="order03_table">
+	                <button class="onlinebank_c2c" onclick="javascript:location.href='pointDetails.php'">前往交易记录</button>
+	            </div>
+	       </div>
+	    </div>
+	</div>
+	<!-- c2c 交易成功 结束-->
+
+
+	<div id="Loading" style="display:none">
+	<div class="cover_loading"></div>
+	    <div id="loader">
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	        <div class="dot"></div>
+	    </div>
+	</div>    
+
+
+	<div class="footer footer_login">
+		<div class="footer_container ">
+			<div class="footer_help">
+				<div class="footer_block">
+					<div>建议浏览器<br><span>RECOMMEMDED BROWSER</span></div>
+					<div class="footer_icon">
+						<div class="chrome_icon" onclick="window.open('https://www.google.com.tw/chrome/browser/desktop/index.html')"></div>
+						<div class="ie_icon" onclick="window.open('http://windows.microsoft.com/zh-cn/internet-explorer/download-ie/')"></div>
+						<div class="ie_green_icon" onclick="window.open('http://se.360.cn/')"></div>
+						<div class="qqllq_icon" onclick="window.open('http://browser.qq.com/')"></div>
+					</div>
+				</div>
+				<div class="footer_block">
+					<div class="login_line"></div>
+				</div>
+				<div class="footer_block">
+					<div>24H线上客服<br><span>24H ONLINE SERVICE</span></div>
+					<div class="footer_icon">
+						<div class="service_QQ" id="service_QQ" onclick="icon('QQ')"></div>
+						<!--QQ 按這裡-->
+						<div class="service_weixin" id="service_weixin" onclick="icon('WEI')"></div>
+						<!--微信按這裡-->
+						<a>
+							<div class="service_online" onclick="window.open('https://v88.live800.com/live800/chatClient/chatbox.jsp?companyID=698946&configID=1586&jid=5625358570&s=1')"></div>
+						</a>
+					</div>
+				</div>
+				<div class="footer_block">
+					<div class="login_line"></div>
+				</div>
+				<div class="footer_block">
+					<div class="footer_help_block">
+						<a href="#">
+							<div class="footer_icon">
+								<div class="help_center"></div>
+								<div class="help_text" onclick="javascript:location.href='helpcenter.php'">帮助中心</div>
+							</div>
+						</a>
+						<a href="tgContact.php">
+							<div class="footer_icon">
+								<div class="cooperate"></div>
+								<div class="help_text" onclick="javascript:location.href='tgContact.php'">与我们合作</div>
+							</div>
+						</a>
+						<a href="statistics.php">
+							<div class="footer_icon">
+								<div class="game_result"></div>
+								<div class="help_text">历年赛事结果</div>
+							</div>
+						</a>
+					</div>
+					<div class="footer_help_block">
+						<a href="rule.php">
+							<div class="footer_icon">
+								<div class="rules"></div>
+								<div class="help_text">规则说明</div>
+							</div>
+						</a>
+						<a href="http://f.tg333.net/" target="_blank">
+							<div class="footer_icon">
+								<div class="discuss"></div>
+								<div class="help_text" onclick="window.open('http://f.tg333.net/')">讨论区</div>
+							</div>
+						</a>
+						<a href="relate.php">
+							<div class="footer_icon">
+								<div class="relate_web"></div>
+								<div class="help_text">相关网站</div>
+							</div>
+						</a>
+						<a href="about.php">
+							<div class="footer_icon">
+								<div class="about_us"></div>
+								<div class="help_text">关于淘金网</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer_black_line"></div>
+			<div>
+				<div class="sup_logo"></div>
+				<div class="footer_text">&copy; burgundy corporate tower,sen gil puyat ave makati city +63 945 129 9918
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/mainJs.js"></script>
+	<script src="../js/waltzerjs.js"></script>
+	<script src="../js/v2.js"></script>
+	<script src="../js/tgjs.js"></script>
+	<script src="../js/sysDateTime.js"></script>
+	<script src="../js/hotNews.js"></script>
+	<script>
+		runTime();
+	</script>
+	<script type="text/javascript">
+        $('#carousel').waltzer();
+  </script>
+
+	
+</body>
+</html>
