@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/font-awesome.min.css">
 	<link rel="stylesheet" href="../css/mainStyle.css">
+	<!-- <link rel="stylesheet" href="../css/fifa_mainStyle.css"> -->
 	<link rel="stylesheet" href="../css/races_news.css">
 	<script type="text/javascript" src="../js/tgjs.js"></script>
 </head>
@@ -25,12 +26,12 @@
 	</script>
 
 <body class="login_body">
-	<div class="login_content_wrap">
-		<div class="login_top">
+	<div class="login_content_wrap fifa_login_content_wrap">
+		<div class="login_top fifa_login_top">
 			<div class="login_logo" onclick="javascript:location.href='./'"></div>
 			<div class="date" id="sysDateTime"></div>
 		</div>
-		<div class="number_line">
+		<div class="number_line fifa_number_line">
 			<div class="lang_select_wrap">
 				<div class="select_lang">
 					<div id="sample" class="dropdown">
@@ -143,6 +144,14 @@
                 <span class="glyphicon glyphicon-chevron-right"></span>
                 <span class="sr-only">Next</span>
             </a>
+		</div>
+		<div class="LiveClock" style="display: none;">
+			<div class="LiveClockInner">
+				<span class="timeDay"></span>
+				<span class="timeHour"></span>
+				<span class="timeMin"></span>
+				<span class="timeSec"></span>
+			</div>
 		</div>
 	</div>
 
@@ -566,7 +575,7 @@
 	</div>    
 
 
-	<div class="footer footer_login">
+	<div class="footer footer_login fifa_footer_login">
 		<div class="footer_container ">
 			<div class="footer_help">
 				<div class="footer_block">
@@ -645,7 +654,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="footer_black_line"></div>
+			<div class="footer footer_login fifa_footer">
+		<div class="footer_container ">
 			<div>
 				<div class="sup_logo"></div>
 				<div class="footer_text">&copy; burgundy corporate tower,sen gil puyat ave makati city +63 945 129 9918
@@ -670,9 +680,11 @@
 
 	<script src="../js/jquery-3.2.1.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/d9858d11e6.js"></script>
 	<script src="../js/mainJs.js"></script>
 	<script src="../js/v2.js"></script>
-	<script src="../js/tgjs.js"></script>
+	<!-- <script src="../js/tgjs.js"></script> -->
+	<script src="../js/fifa.js"></script>
 	<script src="../js/sysDateTime.js"></script>
 	<script>
 		runTime();

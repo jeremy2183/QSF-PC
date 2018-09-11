@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="../css/reset.css">
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/font-awesome.min.css">
-	<link rel="stylesheet" href="../css/mainStyle.css">
+	<link rel="stylesheet" href="../css/fifa_mainStyle_app.css">
 	<link rel="stylesheet" href="../css/races_news.css">
 </head>
 <script>
@@ -24,12 +24,12 @@
 	</script>
 
 <body class="login_body">
-	<div class="login_content_wrap">
-		<div class="login_top">
-			<div class="login_logo" onclick="javascript:location.href='temp-review.html'"></div>
+<div class="login_content_wrap fifa_login_content_wrap">
+		<div class="login_top fifa_login_top">
+			<div class="login_logo fifa_login_logo" onclick="javascript:location.href='fifa_temp-review.html'"></div>
 			<div class="date" id="sysDateTime"></div>
 		</div>
-		<div class="number_line">
+		<div class="number_line fifa_number_line">
 			<div class="lang_select_wrap">
 				<div class="select_lang">
 					<div id="sample" class="dropdown">
@@ -47,13 +47,13 @@
 			<div class="number_line_wrap">
 				<div class="number_wrap">
 					<div class="number_icon"></div>
-					<div>{onlineNum}</div>
+					<div>706</div>
 				</div>
 			</div>
 		</div>
 		<div class="login_navbar_wrap">
 			<!-- START BLOCK : menuInfoBar_notLogin -->
-			<div id="notlogin" class="login_navbar">
+			<!-- <div id="notlogin" class="login_navbar">
 				<div class="right_wrap">
 					<div class="account_wrap">
 						<div class="account_icon"></div>
@@ -70,35 +70,35 @@
 						<button class="register_btn" onclick="intoRegister('')">注册</button>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<!-- END BLOCK : menuInfoBar_notLogin -->
 
 			<!-- START BLOCK : menuInfoBar_Login -->
-			<!-- <div id="login" class="login_navbar">
+			<div id="login" class="login_navbar">
 				<div>
 					<ul>
-						<li><a href="targetList.php">市场列表</a></li>
-						<li><a href="orders.php">交易明细</a></li>
-						<li><a href="history.php">历史帐务</a></li>
-						<li><a href="result.php">赛事结果</a></li>
-						<li><a href="notice.php">公&nbsp;&nbsp;&nbsp;告</a></li>
+						<li><a href="targetList-review.html">市场列表</a></li>
+						<li><a href="orders-review.html">交易明细</a></li>
+						<li><a href="history-review.html">历史帐务</a></li>
+						<li><a href="result-review.html">赛事结果</a></li>
+						<li><a href="notice-review.html">公&nbsp;&nbsp;&nbsp;告</a></li>
 					</ul>
 				</div>
 				<div class="right_wrap">
 					<div class="account_wrap">
 						<div class="account_icon"></div>
-						<div><input type="text" value="{username}" readonly></div>
+						<div><input type="text" value="pzq422" readonly></div>
 					</div>
 					<div class="money_wrap">
 						<div class="acc_icon"></div>
-						<div><input type="text" value="{quotaView}" readonly></div>
+						<div><input type="text" value="0.00" readonly></div>
 					</div>
 					<div class="login_btn_wrap">
 						<a href="userCenter.php"><button class="member_btn">我&nbsp;&nbsp;&nbsp;&nbsp;的</button></a>
 						<a href="logout.php"><button class="logout_btn">登出</button></a>
 					</div>
 				</div>
-			</div> -->
+			</div>
 			<!-- END BLOCK : menuInfoBar_Login -->
 		</div>
 
@@ -457,7 +457,7 @@
 	</div>    
 
 
-	<div class="footer footer_login">
+	<div class="footer footer_login fifa_footer_login">
 		<div class="footer_container ">
 			<div class="footer_help">
 				<div class="footer_block">
@@ -492,24 +492,37 @@
 						<a href="#">
 							<div class="footer_icon">
 								<div class="help_center"></div>
-								<div class="help_text" onclick="javascript:location.href='helpcenter.php'">帮助中心</div>
+								<div class="help_text" onclick="javascript:location.href='helpcenter-review.html'">帮助中心</div>
 							</div>
 						</a>
-						<a href="tgContact.php">
+						<a href="#">
 							<div class="footer_icon">
 								<div class="cooperate"></div>
-								<div class="help_text" onclick="javascript:location.href='tgContact.php'">与我们合作</div>
+								<div class="help_text" onclick="javascript:location.href='#'">与我们合作</div>
 							</div>
 						</a>
-						<a href="statistics.php">
+						<a href="statistics-review.html">
 							<div class="footer_icon">
 								<div class="game_result"></div>
 								<div class="help_text">历年赛事结果</div>
 							</div>
 						</a>
+						<a href="http://35.225.251.63/appmgr/upload/tg_0.0.5.apk">
+							<div class="footer_icon">
+								<div class="game_result"></div>
+								<div class="help_text">Android载点</div>
+							</div>
+						</a>
+						<!-- <a href="#">
+							<div class="footer_icon">
+								<div class="game_result"></div>
+								<div class="help_text">IOS 载点</div>
+							</div>
+						</a> -->
+
 					</div>
 					<div class="footer_help_block">
-						<a href="rule.php">
+						<a href="rule-review.html">
 							<div class="footer_icon">
 								<div class="rules"></div>
 								<div class="help_text">规则说明</div>
@@ -521,13 +534,13 @@
 								<div class="help_text" onclick="window.open('http://f.tg333.net/')">讨论区</div>
 							</div>
 						</a>
-						<a href="relate.php">
+						<a href="relate-review.html">
 							<div class="footer_icon">
 								<div class="relate_web"></div>
 								<div class="help_text">相关网站</div>
 							</div>
 						</a>
-						<a href="about.php">
+						<a href="about-review.html">
 							<div class="footer_icon">
 								<div class="about_us"></div>
 								<div class="help_text">关于淘金网</div>
@@ -536,7 +549,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="footer_black_line"></div>
+		</div>
+	</div>
+	<div class="footer footer_login fifa_footer">
+		<div class="footer_container ">
 			<div>
 				<div class="sup_logo"></div>
 				<div class="footer_text">&copy; burgundy corporate tower,sen gil puyat ave makati city +63 945 129 9918
