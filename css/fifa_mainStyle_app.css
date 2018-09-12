@@ -662,8 +662,8 @@ a:hover {
 
 .game_result {
 	background: url("../img/footerlogo04.svg");
-	width: 35px;
-	height: 35px;
+	width: 40px;
+	height: 40px;
 	margin: 0px auto 5px auto;
 }
 
@@ -5684,8 +5684,8 @@ td div {
 .chrome_icon {
 	background: url("../img/chomelogo.png") no-repeat;
 	background-size: cover;
-	width: 35px;
-	height: 35px;
+	width: 42px;
+	height: 42px;
 	cursor: pointer;
 }
 
@@ -5723,9 +5723,9 @@ a:hover {
 }
 
 .footer_block div {
-	font-size: 26px;
+	font-size: 30px;
 	text-align: center;
-	line-height: 20px;
+	line-height: 22px;
 	vertical-align: middle;
 }
 
@@ -5739,7 +5739,7 @@ a:hover {
 }
 
 .footer_block .footer_icon div {
-	margin: 20px 5px 10px 5px;
+	margin: 20px 10px 10px 10px;
 }
 
 .footer_login {
@@ -5761,7 +5761,8 @@ a:hover {
 	width: 1px;
 	height: 110px;
 	display: inline-block;
-	margin: 0px 20px 50px;
+	margin: 0px 30px 50px 30px;
+
 }
 
 .footer_block .footer_icon .help_center,
