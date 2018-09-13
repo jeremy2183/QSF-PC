@@ -7,10 +7,9 @@
 	<title>result</title>
 	<link rel="stylesheet" href="../css/reset.css">
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" href="../css/font-awesome.min.css">
 	<link rel="stylesheet" href="../css/jquery-ui.css">
-	<link rel="stylesheet" href="../css/mainStyle.css">
-	<link rel="stylesheet" href="../css/races_news.css">
+	<link rel="stylesheet" href="../css/fifa_mainStyle.css">
+	<script async="" charset="UTF-8" src="http://mdt.me0001.com/Web/JS/mivisit.js?_=t"></script>
 	<script>
 		var now = new Date();
 		var year = now.getFullYear();
@@ -139,14 +138,23 @@
 		    		<div class="head">
                 <div class="game_result_icon"></div>
                 <div class="page_title">赛事结果</div>
-                <div class="date_select">
-                	<select id="day" onchange="choosedate(this.value)">
+                <div class="date_select"><select id="day" onchange="choosedate(this.value)">
 
-                <!-- START BLOCK : gameHistoryDetailTitleBlock -->
-                    <option value="{datetime}"  {s}>{dayshow}星期{w}</option>
-                <!-- END BLOCK : gameHistoryDetailTitleBlock -->    
-                	</select>
-                </div>
+                    <option value="2018-09-14"  >09月14日星期五</option>
+                    <option value="2018-09-13"  selected>09月13日星期四</option>
+                    <option value="2018-09-12"  >09月12日星期三</option>
+                    <option value="2018-09-11"  >09月11日星期二</option>
+                    <option value="2018-09-10"  >09月10日星期一</option>
+                    <option value="2018-09-09"  >09月09日星期日</option>
+                    <option value="2018-09-08"  >09月08日星期六</option>
+                    <option value="2018-09-07"  >09月07日星期五</option>
+                    <option value="2018-09-06"  >09月06日星期四</option>
+                    <option value="2018-09-05"  >09月05日星期三</option>
+                    <option value="2018-09-04"  >09月04日星期二</option>
+                    <option value="2018-09-03"  >09月03日星期一</option>
+                    <option value="2018-09-02"  >09月02日星期日</option>
+                    <option value="2018-09-01"  >09月01日星期六</option>
+                </select></div>
             </div>
             <div class="page_title_black_line"></div>
 
@@ -164,18 +172,88 @@
 		            </table>
 		            <table class="game_result_content">
 		            <!-- START BLOCK : gameHistoryDetailcontentBlock--> 
-		                <tr>
-		                    <td class="cell_14">{opendate}<br>{opentime}</td>
-		                    <!--  <td class="cell_14">{timestamp_date}<br>{timestamp_time}</td>-->
-		                    <td class="cell_15">
-		                        【{competition}】<br>
-		                        {host}(主) vs {guest}</td>
-		                    <td class="cell_16">{correctScore}</td>
-		                    <td class="cell_17">{halfTimeScore}</td>
-		                    <td class="cell_18">{totalscore}</td>
-		                    <td class="cell_19">{timeName}</td>
-		                </tr>
+			            <tr>
+	                    <td class="cell_14">2018-09-13<br>08:00:00</td>
+	                    <!--  <td class="cell_14">2018-09-13<br>12:27:08</td>-->
+	                    <td class="cell_15">
+	                        【阿乙C】<br>
+	                        伊希库斯尼斯塔(主) vs 莱安阿拉姆</td>
+	                    <td class="cell_16">1-1</td>
+	                    <td class="cell_17">1-1</td>
+	                    <td class="cell_18">2</td>
+	                    <td class="cell_19"></td>
+	                </tr>
+		            <!-- END BLOCK : gameHistoryDetailcontentBlock-->    
+
+		            <!-- START BLOCK : gameHistoryDetailcontentBlock--> 
+			           	<tr>
+                    <td class="cell_14">2018-09-13<br>08:00:00</td>
+                    <!--  <td class="cell_14">2018-09-13<br>12:27:08</td>-->
+                    <td class="cell_15">
+                        【尼拉甲】<br>
+                        法拉蒂游艇(主) vs 迪利安格恩</td>
+                    <td class="cell_16">2-2</td>
+                    <td class="cell_17">1-1</td>
+                    <td class="cell_18">4</td>
+                    <td class="cell_19"></td>
+                	</tr>
 		            <!-- END BLOCK : gameHistoryDetailcontentBlock-->     
+
+		            <!-- START BLOCK : gameHistoryDetailcontentBlock--> 
+			           	<tr>
+                    <td class="cell_14">2018-09-13<br>08:00:00</td>
+                    <!--  <td class="cell_14">2018-09-13<br>12:27:08</td>-->
+                    <td class="cell_15">
+                        【哥伦杯】<br>
+                        贾奎斯科尔多巴(主) vs 米伦拿列奥</td>
+                    <td class="cell_16">0-0</td>
+                    <td class="cell_17">0-0</td>
+                    <td class="cell_18">0</td>
+                    <td class="cell_19"></td>
+                	</tr>
+		            <!-- END BLOCK : gameHistoryDetailcontentBlock--> 
+
+		            <!-- START BLOCK : gameHistoryDetailcontentBlock--> 
+			           	<tr>
+                    <td class="cell_14">2018-09-13<br>08:00:00</td>
+                    <!--  <td class="cell_14">2018-09-13<br>12:27:08</td>-->
+                    <td class="cell_15">
+                        【哥伦杯】<br>
+                        利昂内斯(主) vs 拉伊奎达特</td>
+                    <td class="cell_16">0-0</td>
+                    <td class="cell_17">0-0</td>
+                    <td class="cell_18">0</td>
+                    <td class="cell_19"></td>
+                	</tr>
+		            <!-- END BLOCK : gameHistoryDetailcontentBlock--> 
+
+		            <!-- START BLOCK : gameHistoryDetailcontentBlock--> 
+			           	<tr>
+                    <td class="cell_14">2018-09-13<br>08:00:00</td>
+                    <!--  <td class="cell_14">2018-09-13<br>12:27:08</td>-->
+                    <td class="cell_15">
+                        【洪都甲】<br>
+                        罗伯士UPNFM(主) vs 伊斯柏纳</td>
+                    <td class="cell_16">1-3</td>
+                    <td class="cell_17">0-1</td>
+                    <td class="cell_18">4</td>
+                    <td class="cell_19"></td>
+                	</tr>
+		            <!-- END BLOCK : gameHistoryDetailcontentBlock--> 
+
+		            <!-- START BLOCK : gameHistoryDetailcontentBlock--> 
+			           	 <tr>
+                    <td class="cell_14">2018-09-13<br>08:30:00</td>
+                    <!--  <td class="cell_14">2018-09-13<br>12:27:08</td>-->
+                    <td class="cell_15">
+                        【厄乙】<br>
+                        罗加(主) vs 曼塔</td>
+                    <td class="cell_16">1-1</td>
+                    <td class="cell_17">0-1</td>
+                    <td class="cell_18">2</td>
+                    <td class="cell_19"></td>
+                	</tr>
+		            <!-- END BLOCK : gameHistoryDetailcontentBlock--> 
 		            </table>
 		        </div>
 		    	  
@@ -434,6 +512,7 @@
 	<script src="../js/v2.js"></script>
 	<script src="../js/tgjs.js"></script>
 	<script src="../js/sysDateTime.js"></script>
+	<script src="../js/tgservice.js"></script>
 	<script>
 		runTime();
 		 //   $(".comment_input textarea").scroll(function(){  
