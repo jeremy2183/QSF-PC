@@ -7,13 +7,23 @@
     <title>TG淘金网</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="../css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="../css/fifa_mainStyle.css">
     <link rel="stylesheet" href="../css/jquery-ui.css">
     <link rel="stylesheet" href="../css/chartN.css">
-    <script async="" charset="UTF-8" src="http://mdt.me0001.com/Web/JS/mivisit.js?_=t"></script>
 </head>
+
 <body>
+<script>
+    var now = new Date();
+    var year = now.getFullYear();
+    var month = now.getMonth();
+    var d = now.getDate();
+    var h = now.getHours();
+    var m = now.getMinutes();
+    var s = now.getSeconds();
+
+    var TodayStr = year + "-" + month +"-"+ d +" "+ h +":" + m +":"+ s ;
+</script>
 
 <div class="top_nav nav navbar-fixed-top">
     <div class="date" id="sysDateTime"></div>
@@ -1296,6 +1306,7 @@
 <script src="../js/bootstrap.min.js"></script>
 <!-- <script src="https://use.fontawesome.com/d9858d11e6.js"></script> -->
 <!-- <script src="../js/v2.js"></script>  -->
+<script src="../js/tgservice.js"></script>
 <script src="../js/tgjs.js"></script>
 <script src="../js/mainJs.js"></script>
 <script src="../js/jquery-ui.js"></script>
